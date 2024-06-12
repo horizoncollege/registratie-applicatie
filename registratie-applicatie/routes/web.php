@@ -2,13 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/dashboard-2', function () {
-    return view('dashboard-2');
+    return view('pages.dashboard-2');
 });
 
 Route::get('/dashboard', function () {
