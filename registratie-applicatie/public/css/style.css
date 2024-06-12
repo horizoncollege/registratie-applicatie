@@ -216,6 +216,15 @@ header h1 {
     flex: 1;
 }
 
+.card-video{
+    
+}
+
+
+video{
+    border-radius: 16px;
+}
+
 .card-left-purple {
     background: 
         linear-gradient(to right, 
