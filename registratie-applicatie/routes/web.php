@@ -20,4 +20,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//aanmeld-formulier.blade.php
+Route::get('/aanmelden', function () {
+    return view('aanmeld-formulieraanmeld-formulier');
+});
+
 require __DIR__.'/auth.php';
