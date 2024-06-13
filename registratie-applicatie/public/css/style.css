@@ -236,21 +236,20 @@ header h1 {
     flex: 1;
 }
 
-.card-video{
-    
-}
+.card-video {}
 
 
-video{
+video {
     border-radius: 16px;
     width: 600px;
 }
 
 .card-left-purple {
-    background: 
-        linear-gradient(to right, 
-            rgba(130, 48, 196, 1) 40%, 
-            rgba(130, 48, 196, 0) 100%), /* Gradient laag */
+    background:
+        linear-gradient(to right,
+            rgba(130, 48, 196, 1) 40%,
+            rgba(130, 48, 196, 0) 100%),
+        /* Gradient laag */
         url(../images/talland-college.jpg);
     background-size: cover;
     background-position: right;
@@ -312,7 +311,7 @@ video{
         display: block;
     }
 
-    header h1{
+    header h1 {
         margin-top: 50px;
     }
 
@@ -320,6 +319,8 @@ video{
 
 .top-bar {
     display: none; 
+    display: none;
+    /* Verberg standaard de top-bar */
 }
 
 @media (max-width: 768px) {
@@ -340,17 +341,71 @@ video{
 
     .top-bar-image {
         position: absolute; 
+        height: 60px;
+        /* Pas dit aan aan de gewenste hoogte van de balk */
+        background-color: #000;
+        z-index: 2;
+        /* Zorg ervoor dat de balk bovenop andere elementen wordt weergegeven */
+        display: block;
+        /* Toon de top-bar alleen op mobiel of iPad */
+    }
+
+    .top-bar.active {
+        display: block;
+        /* Toon de balk wanneer actief */
+    }
+
+    .top-bar-image {
+        position: absolute;
+        /* Gebruik absolute positionering om het in het midden van de topbalk te plaatsen */
         top: 0;
         left: 25%;
         transform: translateX(10%);
         padding: 1px;
+
         z-index: 3; 
+        /* Voeg indien nodig padding toe voor uitlijning */
+        z-index: 3;
+        /* Zorg ervoor dat de afbeelding bovenop de balk wordt weergegeven */
+
         margin-top: 10px;
         margin-bottom: 1px;
     }
 
     .top-bar.active .top-bar-image {
         display: block; 
+        display: block;
+        /* Toon de afbeelding wanneer de balk actief is */
     }
-    
+}
+
+/* Searchbar */
+.searchbar {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.searchbar i {
+    margin: 0 8px 0 10px;
+    font-size: 15px;
+    color: black;
+}
+
+.searchbar input[type=text] {
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    outline: none;
+}
+
+.searchbar input[type=text]:focus {
+    box-shadow: none;
+    outline: none;
 }

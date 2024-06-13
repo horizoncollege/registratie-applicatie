@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -7,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulier</title>
 </head>
+
 <body>
 <h1>Bedrijfsinformatie Formulier</h1>
-<form action="/verzenden" method="post">
+<form action="/verzenden" method="post" enctype="multipart/form-data">
     <label for="naam">Naam:</label><br>
     <input type="text" id="naam" name="naam"><br><br>
 
@@ -43,7 +42,14 @@
     <label for="kvk_nummer">KVK Nummer:</label><br>
     <input type="text" id="kvk_nummer" name="kvk_nummer"><br><br>
 
+    <div class="dropzone" id="dropzone">
+        Sleep je bestanden hierheen of klik om te uploaden
+        <input type="file" id="fileInput" name="files[]" multiple style="display: none;">
+    </div>
+
     <input type="submit" value="Verzenden">
 </form>
+
+
 </body>
 </html>
