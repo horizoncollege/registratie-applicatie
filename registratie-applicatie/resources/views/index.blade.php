@@ -19,11 +19,18 @@
                         <a href="#" class="button-white">Bekijk</a>
                     </div>
                     <div class="bottom-row">
-                        <video width="600" controls>
+                        <video controls poster="images/talland_thumbnail.jpg">
                             <source src="video/Talland_promo_vid.mp4" type="video/mp4">
                         </video>
                         <div class="card card-left">
                             <h3>Ingediende projectvoorstellen</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim itaque alias cumque
+                                voluptates voluptate eum odit sed nulla voluptatum porro iusto, iste, dolorum, culpa
+                                quas? Facere, vel sequi at libero, in ut facilis cum eius perferendis repudiandae itaque
+                                totam culpa aliquam provident amet accusantium tenetur magnam placeat. Earum totam est
+                                ad corrupti, illum aperiam sunt esse. Tenetur ratione fugit perspiciatis 
+                            </p>
+                            <a href="#" class="button-purple">Doe mee!</a>
                             <p></p>
                         </div>
                     </div>
@@ -32,8 +39,14 @@
             <div class="card-container">
                 <div class="left-column">
                     <div class="card card-right">
-                        <h3>Ingediende projectvoorstellen</h3>
-                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet velit.</p>
+                        <h3>Aan de slag!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim itaque alias cumque
+                            voluptates voluptate eum odit sed nulla voluptatum porro iusto, iste, dolorum, culpa
+                            quas? Facere, vel sequi at libero, in ut facilis cum eius perferendis repudiandae itaque
+                            totam culpa aliquam provident amet accusantium tenetur magnam placeat. Earum totam est
+                            ad corrupti, illum aperiam sunt esse. Tenetur ratione fugit perspiciatis dolorem labore
+                            obcaecati, eius rem! Ducimus aut pariatur architecto error excepturi, natus cumque</p>
+                            <a href="#" class="button-purple">Hoe werkt het?</a>
                     </div>
                 </div>
             </div>
