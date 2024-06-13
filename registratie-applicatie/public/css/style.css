@@ -111,6 +111,10 @@ header h1 {
     top: 1px;
 }
 
+.button-purple i {
+    margin-right: 5px;
+}
+
 /* Logo sidebar */
 .logo-container {
     width: 100%;
@@ -260,13 +264,20 @@ video {
     display: none;
 }
 
+/* Top content */
+.top-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 /* Searchbar */
 .searchbar {
     display: flex;
     align-items: center;
+    margin-right: 10px;
     width: 30%;
-    padding: 5px;
-    margin-bottom: 20px;
+    padding: 8px 10px;
     border: 1px solid transparent;
     border-radius: 8px;
     background-color: white;
@@ -398,5 +409,20 @@ video {
 
     .top-bar.active .top-bar-image {
         display: block;
+    }
+
+    .searchbar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .top-content {
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: start;
+        max-width: 387px;
     }
 }
