@@ -91,6 +91,26 @@ header h1 {
     top: 1px;
 }
 
+.button-purple {
+    background-color: #8230C4;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    padding: 8px 30px;
+    text-decoration: none;
+}
+
+.button-purple:hover {
+    background-color: #9f53dc;
+}
+
+.button-purple:active {
+    position: relative;
+    top: 1px;
+}
+
 /* Logo sidebar */
 .logo-container {
     width: 100%;
@@ -221,6 +241,7 @@ header h1 {
 
 video {
     border-radius: 16px;
+    width: 600px;
 }
 
 .card-left-purple {
@@ -265,6 +286,10 @@ video {
         margin-left: 0;
     }
 
+    video{
+        width: auto;
+    }
+
     .card-container {
         flex-direction: column;
     }
@@ -293,17 +318,29 @@ video {
 }
 
 .top-bar {
+    display: none; 
     display: none;
     /* Verberg standaard de top-bar */
 }
 
-/* Mediaquery voor schermen met een maximale breedte van 768px (mobiel of iPad) */
 @media (max-width: 768px) {
     .top-bar {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
+        height: 60px; 
+        background-color: #000;
+        z-index: 2;
+        display: block; 
+    }
+
+    .top-bar.active {
+        display: block; 
+    }
+
+    .top-bar-image {
+        position: absolute; 
         height: 60px;
         /* Pas dit aan aan de gewenste hoogte van de balk */
         background-color: #000;
@@ -325,14 +362,18 @@ video {
         left: 25%;
         transform: translateX(10%);
         padding: 1px;
+
+        z-index: 3; 
         /* Voeg indien nodig padding toe voor uitlijning */
         z-index: 3;
         /* Zorg ervoor dat de afbeelding bovenop de balk wordt weergegeven */
+
         margin-top: 10px;
         margin-bottom: 1px;
     }
 
     .top-bar.active .top-bar-image {
+        display: block; 
         display: block;
         /* Toon de afbeelding wanneer de balk actief is */
     }
