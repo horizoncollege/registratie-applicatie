@@ -1,15 +1,26 @@
-
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulier</title>
+    <style>
+        .dropzone {
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .dropzone.dragover {
+            border-color: #000;
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
 <h1>Bedrijfsinformatie Formulier</h1>
-<form action="/verzenden" method="post">
+<form action="/verzenden" method="post" enctype="multipart/form-data">
     <label for="naam">Naam:</label><br>
     <input type="text" id="naam" name="naam"><br><br>
 
@@ -43,7 +54,40 @@
     <label for="kvk_nummer">KVK Nummer:</label><br>
     <input type="text" id="kvk_nummer" name="kvk_nummer"><br><br>
 
+    <div class="dropzone" id="dropzone">
+        Sleep je bestanden hierheen of klik om te uploaden
+        <input type="file" id="fileInput" name="files[]" multiple style="display: none;">
+    </div>
+
     <input type="submit" value="Verzenden">
 </form>
+
+<script>
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('fileInput');
+
+    dropzone.addEventListener('click', () => fileInput.click());
+
+    dropzone.addEventListener('dragover', (event) => {
+        event.preventDefault();
+        dropzone.classList.add('dragover');
+    });
+
+    dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
+
+    dropzone.addEventListener('drop', (event) => {
+        event.preventDefault();
+        dropzone.classList.remove('dragover');
+        fileInput.files = event.dataTransfer.files;
+    });
+
+    fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+            dropzone.textContent = `${fileInput.files.length} bestand(en) geselecteerd`;
+        } else {
+            dropzone.textContent = 'Sleep je bestanden hierheen of klik om te uploaden';
+        }
+    });
+</script>
 </body>
 </html>
