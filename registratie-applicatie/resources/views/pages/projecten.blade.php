@@ -8,8 +8,12 @@
         </header>
 
         <!-- Content -->
-        <section id="home" class="dashboard-section">
+        <div class="searchbar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Zoeken">
+        </div>
 
+        <section id="home" class="dashboard-section">
             <div class="card-container">
                 <div class="left-column">
                     <div class="card card-left">
