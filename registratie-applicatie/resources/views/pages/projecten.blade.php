@@ -7,10 +7,17 @@
         </header>
 
         <!-- Content -->
-        <div class="searchbar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Zoeken">
+        <div class="top-content">
+            <div class="searchbar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Zoeken">
+            </div>
+            <a href="/aanmelden" class="button-purple">
+                <i class="fa-solid fa-plus"></i>
+                Nieuw project
+            </a>
         </div>
+
 
         <section id="home" class="dashboard-section">
             <div class="card-container">
