@@ -4,20 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulier</title>
-    <style>
-        .dropzone {
-            border: 2px dashed #ccc;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .dropzone.dragover {
-            border-color: #000;
-            background-color: #f0f0f0;
-        }
-    </style>
 </head>
+
 <body>
 <h1>Bedrijfsinformatie Formulier</h1>
 <form action="/verzenden" method="post" enctype="multipart/form-data">
@@ -62,32 +50,6 @@
     <input type="submit" value="Verzenden">
 </form>
 
-<script>
-    const dropzone = document.getElementById('dropzone');
-    const fileInput = document.getElementById('fileInput');
 
-    dropzone.addEventListener('click', () => fileInput.click());
-
-    dropzone.addEventListener('dragover', (event) => {
-        event.preventDefault();
-        dropzone.classList.add('dragover');
-    });
-
-    dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
-
-    dropzone.addEventListener('drop', (event) => {
-        event.preventDefault();
-        dropzone.classList.remove('dragover');
-        fileInput.files = event.dataTransfer.files;
-    });
-
-    fileInput.addEventListener('change', () => {
-        if (fileInput.files.length > 0) {
-            dropzone.textContent = `${fileInput.files.length} bestand(en) geselecteerd`;
-        } else {
-            dropzone.textContent = 'Sleep je bestanden hierheen of klik om te uploaden';
-        }
-    });
-</script>
 </body>
 </html>
