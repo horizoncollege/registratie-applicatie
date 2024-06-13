@@ -2,7 +2,6 @@
 
 <div class="container">
     <main>
-        <!-- Header -->
         <header>
             <h1>Projecten</h1>
         </header>

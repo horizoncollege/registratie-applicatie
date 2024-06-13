@@ -2,7 +2,6 @@
 
 <div class="container">
     <main>
-        <!-- Header -->
         <header>
             <h1>Welkom</h1>
         </header>
@@ -28,7 +27,7 @@
                                 voluptates voluptate eum odit sed nulla voluptatum porro iusto, iste, dolorum, culpa
                                 quas? Facere, vel sequi at libero, in ut facilis cum eius perferendis repudiandae itaque
                                 totam culpa aliquam provident amet accusantium tenetur magnam placeat. Earum totam est
-                                ad corrupti, illum aperiam sunt esse. Tenetur ratione fugit perspiciatis 
+                                ad corrupti, illum aperiam sunt esse. Tenetur ratione fugit perspiciatis
                             </p>
                             <a href="#" class="button-purple">Doe mee!</a>
                             <p></p>
@@ -46,7 +45,7 @@
                             totam culpa aliquam provident amet accusantium tenetur magnam placeat. Earum totam est
                             ad corrupti, illum aperiam sunt esse. Tenetur ratione fugit perspiciatis dolorem labore
                             obcaecati, eius rem! Ducimus aut pariatur architecto error excepturi, natus cumque</p>
-                            <a href="#" class="button-purple">Hoe werkt het?</a>
+                        <a href="#" class="button-purple">Hoe werkt het?</a>
                     </div>
                 </div>
             </div>
