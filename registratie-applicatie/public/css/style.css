@@ -291,6 +291,20 @@ video {
     outline: none;
 }
 
+/* Aanmeldformulier */
+.dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dropzone.dragover {
+    border-color: #000;
+    background-color: #f0f0f0;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     .container {
