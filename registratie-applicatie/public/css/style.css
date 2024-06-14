@@ -70,7 +70,7 @@ header h1 {
     color: #C5C5C5;
 }
 
-/* Buttons */
+/* Button White */
 .button-white {
     background-color: #ffffff;
     border-radius: 6px;
@@ -91,6 +91,7 @@ header h1 {
     top: 1px;
 }
 
+/* Button Purple */
 .button-purple {
     background-color: #8230C4;
     border-radius: 6px;
@@ -112,6 +113,30 @@ header h1 {
 }
 
 .button-purple i {
+    margin-right: 5px;
+}
+
+/* Button New Project */
+.button-new-project {
+    background-color: #8230C4;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    padding: 8px 30px;
+    text-decoration: none;
+}
+
+.button-new-project:hover {
+    background-color: #9f53dc;
+}
+
+.button-new-project:active {
+    position: relative;
+    top: 1px;
+}
+
+.button-new-project i {
     margin-right: 5px;
 }
 
@@ -281,20 +306,27 @@ video {
     border: 1px solid transparent;
     border-radius: 8px;
     background-color: white;
+    color: #4B4B4B;
+}
+
+.searchbar input::placeholder {
+    color: #4B4B4B;
 }
 
 .searchbar i {
     margin: 0 8px 0 10px;
     font-size: 15px;
-    color: black;
+    color: #4B4B4B;
 }
 
 .searchbar input[type=text] {
     width: 100%;
     font-size: 15px;
+    font-weight: bold;
     border: 1px solid transparent;
     border-radius: 8px;
     outline: none;
+    color: #4B4B4B;
 }
 
 .searchbar input[type=text]:focus {

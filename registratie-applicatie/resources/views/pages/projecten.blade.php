@@ -12,7 +12,7 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Zoeken">
             </div>
-            <a href="/aanmelden" class="button-purple">
+            <a href="/aanmelden" class="button-new-project">
                 <i class="fa-solid fa-plus"></i>
                 Nieuw project
             </a>
