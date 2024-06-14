@@ -334,6 +334,53 @@ video {
     outline: none;
 }
 
+/* Projects */
+.projects {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.header-row,
+.project-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding: 20px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.project-row {
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.header-item,
+.project-item {
+    flex: 1;
+    text-align: start;
+}
+
+.project-row:nth-child(even) {
+    background-color: #fff;
+}
+
+.project-row:nth-child(odd) {
+    background-color: #fff;
+}
+
+.project-row:last-child {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
 /* Aanmeldformulier */
 .dropzone {
     border: 2px dashed #ccc;
@@ -355,6 +402,11 @@ video {
         padding: 0;
     }
 
+    /* Sidebar + Hamburger menu */
+    .hamburger {
+        display: block;
+    }
+
     .sidebar {
         width: 100%;
         height: auto;
@@ -367,6 +419,8 @@ video {
         transform: translateX(0);
     }
 
+    /* Main */
+
     main {
         width: 100%;
         order: 2;
@@ -374,10 +428,12 @@ video {
         margin-left: 0;
     }
 
+    /* Video on home */
     video {
         width: auto;
     }
 
+    /* Cards */
     .card-container {
         flex-direction: column;
     }
@@ -395,10 +451,7 @@ video {
         flex: none;
     }
 
-    .hamburger {
-        display: block;
-    }
-
+    /* Header */
     header h1 {
         margin-top: 50px;
     }
@@ -443,6 +496,7 @@ video {
         display: block;
     }
 
+    /* Searchbar + Nieuw project button */
     .searchbar {
         display: flex;
         align-items: center;
@@ -456,5 +510,22 @@ video {
         flex-direction: column;
         align-items: start;
         max-width: 387px;
+    }
+
+    /* Projects */
+    .header-row {
+        display: none;
+    }
+
+    .project-row {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-item,
+    .project-item {
+        flex: 100%;
+        margin-bottom: 10px;
+        text-align: left;
     }
 }
