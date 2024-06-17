@@ -240,6 +240,13 @@ header h1 {
 }
 
 /* Login */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .login-container {
     width: 100%;
     max-width: 900px;
@@ -596,5 +603,44 @@ video {
         flex: 100%;
         margin-bottom: 10px;
         text-align: left;
+    }
+
+    /* Login */
+    .login {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        height: 0vh;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+    }
+
+    .login-left,
+    .login-right {
+        flex: 1;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .login-left {
+        display: none;
+    }
+
+    .login-right {
+        background-color: fff;
+        border-radius: 16px;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
