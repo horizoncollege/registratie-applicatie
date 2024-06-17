@@ -17,6 +17,11 @@ Route::get('/dashboard-2', function () {
     return view('pages.dashboard-2');
 });
 
+// Login
+Route::get('/login-2', function () {
+    return view('pages.login2');
+});
+
 // Breeze
 Route::get('/dashboard', function () {
     return view('dashboard');
