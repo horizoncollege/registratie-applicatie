@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 
+@include('partials.sidebar')
+
 <div class="container">
     <main>
         <header>

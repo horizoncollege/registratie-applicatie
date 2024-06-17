@@ -33,4 +33,4 @@ Route::get('/aanmelden', function () {
     return view('aanmeld-formulier');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
