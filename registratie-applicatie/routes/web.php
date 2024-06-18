@@ -33,4 +33,9 @@ Route::get('/aanmelden', function () {
     return view('aanmeld-formulier');
 });
 
+//aanmeld-formulier.blade.php
+Route::post('/contact-form', [\App\Http\Controllers\FormController::class, 'store'])->name('form.store');
+Route::get('/dashboard-contact', [\App\Http\Controllers\FormController::class, 'index'])->name('index');
+Route::delete('/contact-form/{id}', [\App\Http\Controllers\FormController::class, 'destroy'])->name('form.delete');
+
 require __DIR__.'/auth.php';
