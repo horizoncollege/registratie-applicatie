@@ -1,8 +1,8 @@
 @extends('layouts.layout')
 
-@include('partials.sidebar')
+@section('title', 'Projecten')
 
-<div class="container">
+@section('content')
     <main>
         <header>
             <h1>Projecten</h1>
@@ -43,4 +43,4 @@
             </div>
         </div>
     </main>
-</div>
+@endsection

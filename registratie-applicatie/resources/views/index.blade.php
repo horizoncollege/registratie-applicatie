@@ -1,6 +1,6 @@
 @extends('layouts.layout-home')
 
-<div class="container">
+@section('content')
     <main>
         <header>
             <h1>Welkom</h1>
@@ -18,8 +18,8 @@
                         <a href="#" class="button-white">Bekijk</a>
                     </div>
                     <div class="bottom-row">
-                        <video controls poster="images/talland_thumbnail.jpg">
-                            <source src="video/Talland_promo_vid.mp4" type="video/mp4">
+                        <video controls poster="{{ asset('images/talland_thumbnail.jpg') }}">
+                            <source src="{{ asset('video/Talland_promo_vid.mp4') }}" type="video/mp4">
                         </video>
                         <div class="card card-left">
                             <h3>Ingediende projectvoorstellen</h3>
@@ -51,4 +51,4 @@
             </div>
         </section>
     </main>
-</div>
+@endsection

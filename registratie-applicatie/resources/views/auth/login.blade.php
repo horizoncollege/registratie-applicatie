@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout-login')
 
 <x-auth-session-status class="mb-4" :status="session('status')" />
 
