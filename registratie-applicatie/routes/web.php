@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FormController;
 
 // Index
 Route::get('/', [HomeController::class, 'index']);
@@ -34,8 +35,15 @@ Route::get('/aanmelden', function () {
 });
 
 //aanmeld-formulier.blade.php
-Route::post('/contact-form', [\App\Http\Controllers\FormController::class, 'store'])->name('form.store');
-Route::get('/dashboard-contact', [\App\Http\Controllers\FormController::class, 'index'])->name('index');
-Route::delete('/contact-form/{id}', [\App\Http\Controllers\FormController::class, 'destroy'])->name('form.delete');
+// Route::post('/contact-form', [\App\Http\Controllers\FormController::class, 'store'])->name('form.store');
+// Route::get('/dashboard-contact', [\App\Http\Controllers\FormController::class, 'index'])->name('index');
+// Route::delete('/contact-form/{id}', [\App\Http\Controllers\FormController::class, 'destroy'])->name('form.delete');
+
+Route::get('/form', [FormController::class, 'index'])->name('form.index');
+Route::post('/form/store', [FormController::class, 'store'])->name('form.store');
+Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('form.destroy');
+
 
 require __DIR__.'/auth.php';
+
+

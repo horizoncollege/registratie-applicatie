@@ -9,7 +9,7 @@ class FormController extends Controller
 {
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required',
             'company' => 'required',
             'place' => 'required',
@@ -21,24 +21,28 @@ class FormController extends Controller
             'activity' => 'required',
             'workers' => 'required',
             'kvk_number' => 'required',
-            'fileInput' => 'required',
+            // 'fileInput' => 'required|file',
         ]);
 
-        Form::create($request->all());
+        if ($request->hasFile('fileInput')) {
+            $validated['fileInput'] = $request->file('fileInput')->store('uploads', 'public');
+        }
+
+        Form::create($validated);
 
         return back()->with('success', 'Bedankt voor uw bericht! We zullen spoedig contact met u opnemen.');
     }
 
     public function index()
     {
-        $forms = form::latest()->get();
-        return view('index');
+        $forms = Form::latest()->get();
+        return view('index', compact('forms'));
     }
 
     public function destroy($id)
     {
-        $forms = Form::findOrFail($id);
-        $forms->delete();
+        $form = Form::findOrFail($id);
+        $form->delete();
 
         return redirect()->route('index')->with('success', 'Contactformulier succesvol verwijderd.');
     }
