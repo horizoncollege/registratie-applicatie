@@ -14,16 +14,6 @@
     <main class="content">
         @yield('content')
     </main>
-
-    <script>
-        // Sidebar Hamburger menu + X-button
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.sidebar').classList.toggle('active');
-            document.querySelector('.top-bar').classList.toggle('active', !document.querySelector('.sidebar')
-                .classList.contains('active'));
-        });
-    </script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout-dashboard')
 
 @section('title', 'Projecten')
 
@@ -15,7 +15,7 @@
                 <input type="text" placeholder="Zoeken">
             </div>
             {{-- Nieuw project button --}}
-            <a href="/aanmelden" class="button-new-project">
+            <a href="/dashboard-2/aanmelden" class="button-new-project">
                 <i class="fa-solid fa-plus"></i>
                 Nieuw project
             </a>
