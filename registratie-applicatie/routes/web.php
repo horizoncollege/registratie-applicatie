@@ -7,19 +7,31 @@ use App\Http\Controllers\HomeController;
 // Index
 Route::get('/', [HomeController::class, 'index']);
 
-// Projecten
-Route::get('/projecten', function () {
-    return view('pages.projecten');
+// Informatie
+Route::get('/informatie', function () {
+    return view('site.informatie');
 });
 
 // Dashboard
 Route::get('/dashboard-2', function () {
-    return view('pages.dashboard-2');
+    return view('dashboard.dashboard-2');
+});
+
+Route::get('/dashboard-2/beoordelen', function () {
+    return view('dashboard.beoordelen');
+});
+
+Route::get('/dashboard-2/projecten', function () {
+    return view('dashboard.projecten');
+});
+
+Route::get('/dashboard-2/testimonials', function () {
+    return view('dashboard.testimonials');
 });
 
 // Profiel
-Route::get('/dashboard-2-profiel', function () {
-    return view('pages.dashboard-2-profiel');
+Route::get('/dashboard-2/profiel', function () {
+    return view('dashboard.profiel');
 });
 
 // Breeze
@@ -35,7 +47,7 @@ Route::middleware('auth')->group(function () {
 
 //aanmeld-formulier.blade.php
 Route::get('/aanmelden', function () {
-    return view('aanmeld-formulier');
+    return view('site.aanmeld-formulier');
 });
 
 require __DIR__ . '/auth.php';
