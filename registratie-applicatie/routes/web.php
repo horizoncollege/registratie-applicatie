@@ -37,7 +37,7 @@ Route::get('/dashboard-2/profiel', function () {
 
 // Breeze
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -46,19 +46,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//aanmeld-formulier.blade.php
-Route::get('/aanmelden', function () {
-    return view('site.aanmeld-formulier');
+// Aanmeldformulier
+Route::get('/dashboard-2/aanmelden', function () {
+    return view('dashboard.aanmeldformulier');
 });
-
-//aanmeld-formulier.blade.php
-// Route::post('/contact-form', [\App\Http\Controllers\FormController::class, 'store'])->name('form.store');
-// Route::get('/dashboard-contact', [\App\Http\Controllers\FormController::class, 'index'])->name('index');
-// Route::delete('/contact-form/{id}', [\App\Http\Controllers\FormController::class, 'destroy'])->name('form.delete');
 
 Route::get('/form', [FormController::class, 'index'])->name('form.index');
 Route::post('/form/store', [FormController::class, 'store'])->name('form.store');
 Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('form.destroy');
 
-
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

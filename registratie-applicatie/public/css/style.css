@@ -36,6 +36,7 @@ footer {
 }
 
 main {
+    animation: transitionIn .75s;
     flex: 1;
     padding-left: 20px;
     padding-right: 20px;
@@ -68,6 +69,19 @@ header h1 {
 .card-left-purple p {
     width: 50%;
     color: #C5C5C5;
+}
+
+/* Animations */
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX('-10deg');
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX('0');
+    }
 }
 
 /* Button White */
@@ -150,6 +164,21 @@ header h1 {
     padding: 8px 30px;
     border: none;
     outline: none;
+}
+
+/* Back button login */
+.back-button a {
+    color: gray;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-button a:hover {
+    color: darkgray;
+}
+
+.back-button a i {
+    margin-right: 12px;
 }
 
 
@@ -255,9 +284,17 @@ header h1 {
 /* Login */
 .login {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    grid-gap: 10px 0px;
 }
 
 .login-container {
@@ -354,11 +391,6 @@ header h1 {
     flex: 1;
 }
 
-video {
-    border-radius: 16px;
-    width: 600px;
-}
-
 .card-left-purple {
     background:
         linear-gradient(to right,
@@ -374,15 +406,20 @@ video {
     flex: 1;
 }
 
-/* profile page */
+/* Video card */
+video {
+    border-radius: 16px;
+    width: 600px;
+}
 
+/* Profiel */
 .card-right-profiel {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    text-align: center; 
+    text-align: center;
     min-width: 260px;
     max-width: 260px;
 }
@@ -390,7 +427,7 @@ video {
 .foto-profiel {
     display: block;
     width: 80%;
-    max-width: 250px; 
+    max-width: 250px;
     height: auto;
     border-radius: 100%;
     margin: 10px auto;
@@ -403,30 +440,30 @@ video {
 
 .container-profiel {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
     margin: 20px 0;
 }
 
 .column-profiel {
-    flex: 1 1 250px; 
-    padding: 0 15px; 
+    flex: 1 1 250px;
+    padding: 0 15px;
 }
 
 .column-profiel a {
     display: block;
-    margin: 10px 0; 
+    margin: 10px 0;
     color: #C5C5C5;
-    font-size: 18px; 
+    font-size: 18px;
     font-family: 'Poppins', sans-serif;
     margin-left: 10px;
-    
+
 }
 
 .account-options-profiel {
     display: flex;
     justify-content: start;
-    gap: 10px; 
+    gap: 10px;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -437,7 +474,7 @@ video {
 }
 
 .account-options-profiel a:hover {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .h3-profiel {
@@ -446,23 +483,6 @@ video {
     text-align: start;
     margin-left: 20px;
 }
-
-/* Responsive breakpoints */
-@media screen and (max-width: 768px) {
-    .foto-profiel {
-        max-width: 200px; 
-    }
-
-    .column-profiel {
-        flex: 1 1 100%; 
-    }
-
-    .account-options-profiel {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 
 .top-bar {
     display: none;
@@ -574,7 +594,7 @@ video {
     background-color: #f0f0f0;
 }
 
-/* Mobile responsive */
+/* Mobile responsive breakpoints */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -599,7 +619,6 @@ video {
     }
 
     /* Main */
-
     main {
         width: 100%;
         order: 2;
@@ -629,6 +648,7 @@ video {
     .card-right {
         flex: none;
     }
+
     .card-right-profiel {
         flex: none;
     }
@@ -711,12 +731,32 @@ video {
         text-align: left;
     }
 
+    /* Profiel */
+    .foto-profiel {
+        max-width: 200px;
+    }
+
+    .column-profiel {
+        flex: 1 1 100%;
+    }
+
+    .account-options-profiel {
+        flex-direction: column;
+        align-items: center;
+    }
+
     /* Login */
+    .window {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .login {
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: baseline;
-        height: 0vh;
+
     }
 
     .login-container {
@@ -724,12 +764,6 @@ video {
         max-width: 900px;
         display: flex;
         justify-content: center;
-    }
-
-    .login-container {
-        width: 100%;
-        max-width: 900px;
-        display: flex;
     }
 
     .login-left,

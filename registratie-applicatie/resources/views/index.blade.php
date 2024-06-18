@@ -1,7 +1,10 @@
-@extends('layouts.layout-home')
+@extends('layouts.layout')
+
+@section('title', 'Talland College')
 
 @section('content')
     <main>
+        <!-- Header -->
         <header>
             <h1>Welkom</h1>
         </header>
@@ -37,8 +40,8 @@
             </div>
             <div class="card-container">
                 <div class="left-column">
-                    <div class="card card-right">
-                        <h3>Aan de slag!</h3>
+                    <div class="card card-left">
+                        <h3>Recente projecten</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim itaque alias cumque
                             voluptates voluptate eum odit sed nulla voluptatum porro iusto, iste, dolorum, culpa
                             quas? Facere, vel sequi at libero, in ut facilis cum eius perferendis repudiandae itaque
