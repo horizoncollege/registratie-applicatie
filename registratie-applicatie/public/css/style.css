@@ -134,6 +134,8 @@ header h1 {
 .button-new-project {
     background-color: #8230C4;
     border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
     display: inline-block;
     cursor: pointer;
     color: white;
@@ -158,6 +160,8 @@ header h1 {
 .button-login {
     background-color: #8230C4;
     border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
     display: inline-block;
     cursor: pointer;
     color: white;
@@ -504,7 +508,7 @@ video {
     padding: 8px 10px;
     border: 1px solid transparent;
     border-radius: 8px;
-    background-color: white;
+    background-color: #fff;
     color: #4B4B4B;
 }
 
@@ -581,17 +585,60 @@ video {
 }
 
 /* Aanmeldformulier */
-.dropzone {
-    border: 2px dashed #ccc;
-    border-radius: 10px;
+#companyForm {
+    background-color: #fff;
     padding: 20px;
-    text-align: center;
-    margin-top: 20px;
+    border-radius: 8px;
+    width: 300px;
 }
 
-.dropzone.dragover {
-    border-color: #000;
-    background-color: #f0f0f0;
+#companyForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#companyForm input[type="text"],
+#companyForm input[type="tel"],
+#companyForm input[type="email"],
+#companyForm input[type="url"],
+#companyForm input[type="number"],
+#companyForm input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#companyForm input[type="submit"] {
+    background-color: #8230C4;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
+
+#companyForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.dropzone input[type="file"] {
+    display: none;
 }
 
 /* Mobile responsive breakpoints */
