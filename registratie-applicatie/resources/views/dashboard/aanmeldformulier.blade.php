@@ -16,47 +16,46 @@
             @endif
             <form id="companyForm" enctype="multipart/form-data">
                 @csrf
-                <label for="name">Naam:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+                <label for="name">Naam:</label>
+                <input type="text" id="name" name="name" required>
 
-                <label for="company">Bedrijfsnaam:</label><br>
-                <input type="text" id="company" name="company" required><br><br>
+                <label for="company">Bedrijfsnaam:</label>
+                <input type="text" id="company" name="company" required>
 
-                <label for="place">Plaats:</label><br>
-                <input type="text" id="place" name="place" required><br><br>
+                <label for="place">Plaats:</label>
+                <input type="text" id="place" name="place" required>
 
-                <label for="contactperson">Contactpersoon:</label><br>
-                <input type="text" id="contactperson" name="contactperson" required><br><br>
+                <label for="contactperson">Contactpersoon:</label>
+                <input type="text" id="contactperson" name="contactperson" required>
 
-                <label for="function">Functie:</label><br>
-                <input type="text" id="function" name="function" required><br><br>
+                <label for="function">Functie:</label>
+                <input type="text" id="function" name="function" required>
 
-                <label for="phone">Telefoonnummer:</label><br>
-                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"><br><br>
+                <label for="phone">Telefoonnummer:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
 
-                <label for="email">E-mail:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
 
-                <label for="website">Website:</label><br>
-                <input type="url" id="website" name="website"><br><br>
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website">
 
-                <label for="activity">Bedrijfsactiviteit / Core business:</label><br>
-                <input type="text" id="activity" name="activity" required><br><br>
+                <label for="activity">Bedrijfsactiviteit / Core business:</label>
+                <input type="text" id="activity" name="activity" required>
 
-                <label for="workers">Aantal medewerkers:</label><br>
-                <input type="number" id="workers" name="workers" required><br><br>
+                <label for="workers">Aantal medewerkers:</label>
+                <input type="number" id="workers" name="workers" required>
 
-                <label for="kvk_number">KVK Nummer:</label><br>
-                <input type="text" id="kvk_number" name="kvk_number" required><br><br>
+                <label for="kvk_number">KVK Nummer:</label>
+                <input type="text" id="kvk_number" name="kvk_number" required>
 
                 <label for="fileInput" class="dropzone" id="dropzone">
-                    klik hier om bestanden te uploaden
-                    <input type="file" id="fileInput" name="fileInput" style="display: none;">
-                </label><br><br>
+                    Upload bestand
+                    <input type="file" id="fileInput" name="fileInput">
+                </label>
 
-                <input type="submit" value="Verzenden">
+                <input type="submit" class="button-login" value="Verzenden">
             </form>
         </section>
     </main>
 @endsection
-
