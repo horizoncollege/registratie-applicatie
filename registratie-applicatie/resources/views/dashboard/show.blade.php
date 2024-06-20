@@ -47,5 +47,9 @@
                 <div class="project-item">{{ $form->updated_at->format('d-m-Y') }}</div>
             </div>
         </div>
+        <div class="back-button">
+            <a href="/" onclick="history.back(); return false;"><i class="fa-solid fa-arrow-left"></i>Ga
+                terug</a>
+        </div>
     </main>
 @endsection
