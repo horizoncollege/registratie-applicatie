@@ -22,13 +22,22 @@ Route::get('/dashboard-2/beoordelen', function () {
     return view('dashboard.beoordelen');
 });
 
-Route::get('/dashboard-2/projecten', function () {
-    return view('dashboard.projecten');
-});
-
 Route::get('/dashboard-2/testimonials', function () {
     return view('dashboard.testimonials');
 });
+
+// Aanmeldformulier
+Route::get('/dashboard-2/aanmelden', function () {
+    return view('dashboard.aanmeldformulier');
+});
+
+// Projecten
+Route::get('/dashboard-2/projecten', [FormController::class, 'index'])->name('projecten');
+Route::get('/dashboard-2/projecten/{name}', [FormController::class, 'show'])->name('project.show');
+
+Route::get('/form', [FormController::class, 'index'])->name('form.index');
+Route::post('/form/store', [FormController::class, 'store'])->name('form.store');
+Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('form.destroy');
 
 // Profiel
 Route::get('/dashboard-2/profiel', function () {
@@ -45,14 +54,5 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-// Aanmeldformulier
-Route::get('/dashboard-2/aanmelden', function () {
-    return view('dashboard.aanmeldformulier');
-});
-
-Route::get('/form', [FormController::class, 'index'])->name('form.index');
-Route::post('/form/store', [FormController::class, 'store'])->name('form.store');
-Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('form.destroy');
 
 require __DIR__ . '/auth.php';

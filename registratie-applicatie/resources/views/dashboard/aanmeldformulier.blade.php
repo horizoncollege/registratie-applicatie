@@ -16,45 +16,69 @@
             @endif
             <form id="companyForm" enctype="multipart/form-data">
                 @csrf
-                <label for="name">Naam:</label>
-                <input type="text" id="name" name="name" required>
+                <div class="form-row">
+                    <label for="name">Naam:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-                <label for="company">Bedrijfsnaam:</label>
-                <input type="text" id="company" name="company" required>
+                <div class="form-row">
+                    <label for="company">Bedrijfsnaam:</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
 
-                <label for="place">Plaats:</label>
-                <input type="text" id="place" name="place" required>
+                <div class="form-row">
+                    <label for="place">Plaats:</label>
+                    <input type="text" id="place" name="place" required>
+                </div>
 
-                <label for="contactperson">Contactpersoon:</label>
-                <input type="text" id="contactperson" name="contactperson" required>
+                <div class="form-row">
+                    <label for="contactperson">Contactpersoon:</label>
+                    <input type="text" id="contactperson" name="contactperson" required>
+                </div>
 
-                <label for="function">Functie:</label>
-                <input type="text" id="function" name="function" required>
+                <div class="form-row">
+                    <label for="function">Functie:</label>
+                    <input type="text" id="function" name="function" required>
+                </div>
 
-                <label for="phone">Telefoonnummer:</label>
-                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+                <div class="form-row">
+                    <label for="phone">Telefoonnummer:</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+                </div>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-row">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-                <label for="website">Website:</label>
-                <input type="url" id="website" name="website">
+                <div class="form-row">
+                    <label for="website">Website:</label>
+                    <input type="url" id="website" name="website">
+                </div>
 
-                <label for="activity">Bedrijfsactiviteit / Core business:</label>
-                <input type="text" id="activity" name="activity" required>
+                <div class="form-row">
+                    <label for="activity">Bedrijfsactiviteit / Core business:</label>
+                    <input type="text" id="activity" name="activity" required>
+                </div>
 
-                <label for="workers">Aantal medewerkers:</label>
-                <input type="number" id="workers" name="workers" required>
+                <div class="form-row">
+                    <label for="workers">Aantal medewerkers:</label>
+                    <input type="number" id="workers" name="workers" required>
+                </div>
 
-                <label for="kvk_number">KVK Nummer:</label>
-                <input type="text" id="kvk_number" name="kvk_number" required>
+                <div class="form-row">
+                    <label for="kvk_number">KVK Nummer:</label>
+                    <input type="text" id="kvk_number" name="kvk_number" required>
+                </div>
 
-                <label for="fileInput" class="dropzone" id="dropzone">
-                    Upload bestand
+                <div class="form-row dropzone">
+                    <label for="fileInput">Upload bestand</label>
                     <input type="file" id="fileInput" name="fileInput">
-                </label>
+                </div>
 
-                <input type="submit" class="button-login" value="Verzenden">
+                <div class="form-row">
+                    <input type="submit" class="button-login" value="Verzenden">
+                </div>
             </form>
         </section>
     </main>
