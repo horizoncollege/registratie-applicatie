@@ -50,6 +50,10 @@ header h1 {
     color: #000000;
 }
 
+.bottom-section h2 {
+    font-size: 23px;
+}
+
 .card h3 {
     margin-top: 0;
 }
@@ -134,8 +138,7 @@ header h1 {
 .button-new-project {
     background-color: #8230C4;
     border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 15px;
     display: inline-block;
     cursor: pointer;
     color: white;
@@ -178,7 +181,7 @@ header h1 {
 .back-button a {
     color: gray;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .back-button a:hover {
@@ -193,7 +196,7 @@ header h1 {
 .bekijk-button a {
     color: gray;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .bekijk-button a:hover {
@@ -204,6 +207,32 @@ header h1 {
     margin-right: 12px;
 }
 
+/* URL button */
+.url-button {
+    display: flex;
+    align-items: center;
+}
+
+.url-button a {
+    color: #8230C4;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.url-button a:hover {
+    color: #9f53dc;
+}
+
+.url-button a i {
+    margin-right: 12px;
+}
+
+/* Heading+item */
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* Logo sidebar */
 .logo-container {
@@ -429,6 +458,11 @@ header h1 {
     flex: 1;
 }
 
+/* Bottom section */
+.bottom-section {
+    margin-top: 50px;
+}
+
 /* Video card */
 video {
     border-radius: 16px;
@@ -563,7 +597,8 @@ video {
     border-radius: 5px;
 }
 
-.header-row, .middle-row,
+.header-row,
+.middle-row,
 .project-row {
     display: flex;
     justify-content: space-between;
