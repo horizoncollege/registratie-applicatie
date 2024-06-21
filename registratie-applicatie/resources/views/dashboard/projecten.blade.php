@@ -12,7 +12,7 @@
         <div class="top-content">
             <div class="searchbar">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Zoeken">
+                <input type="text" id="searchInput" placeholder="Zoeken">
             </div>
             {{-- Nieuw project button --}}
             <a href="/dashboard-2/aanmelden" class="button-new-project">
@@ -56,9 +56,9 @@
                 </div>
             @endforelse
         </div>
-
-
-
-
+        <div id="noResultsMessage"
+            style="display: none; padding: 10px;">
+            Geen projecten gevonden die aan de zoekcriteria voldoen.
+        </div>
     </main>
 @endsection
