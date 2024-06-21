@@ -25,22 +25,40 @@
         <div class="projects">
             <div class="header-row">
                 <div class="header-item">Projectnaam</div>
-                <div class="header-item">Opdrachtgever</div>
-                <div class="header-item">Beschrijving</div>
+                <div class="header-item">Bedrijf</div>
+                <div class="header-item">Contactpersoon</div>
                 <div class="header-item">Datum</div>
+                <div class="header-item" style="visibility: hidden;">Actie</div>
             </div>
-            <div class="project-row">
-                <div class="project-item">Project 2</div>
-                <div class="project-item">Abbiraam Sinnathamby</div>
-                <div class="project-item">Lorem ipsum dolor sit amet.</div>
-                <div class="project-item">2023-05-20</div>
-            </div>
-            <div class="project-row">
-                <div class="project-item">Project 1</div>
-                <div class="project-item">Bruno Dijkhuis</div>
-                <div class="project-item">Lorem ipsum dolor sit amet.</div>
-                <div class="project-item">2023-06-10</div>
-            </div>
+
+            @forelse ($forms as $form)
+                <div class="project-row">
+                    <div class="project-item">{{ $form->name }}</div>
+                    <div class="project-item">{{ $form->company }}</div>
+                    <div class="project-item">{{ $form->contactperson }}</div>
+                    <div class="project-item">{{ $form->created_at->format('d-m-Y') }}</div>
+                    <div class="project-item">
+                        <div class="project-item bekijk-button">
+                            <?php
+                            $name = strtolower($form->name);
+                            $url = route('project.show', ['name' => urlencode($name)]);
+                            $url = str_replace('+', '%20', $url);
+                            ?>
+                            <a href="{{ $url }}">
+                                <i class="fa-solid fa-arrow-right"></i> Bekijk project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            @empty
+                <div class="project-row">
+                    <div class="project-item" colspan="5">Geen projecten gevonden.</div>
+                </div>
+            @endforelse
         </div>
+
+
+
+
     </main>
 @endsection

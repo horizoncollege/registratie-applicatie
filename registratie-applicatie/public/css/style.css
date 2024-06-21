@@ -156,7 +156,7 @@ header h1 {
     margin-right: 5px;
 }
 
-/* Button login */
+/* Back buttom */
 .button-login {
     background-color: #8230C4;
     border-radius: 6px;
@@ -170,7 +170,11 @@ header h1 {
     outline: none;
 }
 
-/* Back button login */
+/* Back button */
+.back-button {
+    margin-bottom: 20px;
+}
+
 .back-button a {
     color: gray;
     text-decoration: none;
@@ -182,6 +186,21 @@ header h1 {
 }
 
 .back-button a i {
+    margin-right: 12px;
+}
+
+/* Bekijk button */
+.bekijk-button a {
+    color: gray;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.bekijk-button a:hover {
+    color: darkgray;
+}
+
+.bekijk-button a i {
     margin-right: 12px;
 }
 
@@ -544,7 +563,7 @@ video {
     border-radius: 5px;
 }
 
-.header-row,
+.header-row, .middle-row,
 .project-row {
     display: flex;
     justify-content: space-between;
@@ -556,6 +575,15 @@ video {
     padding: 20px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.middle-row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding: 20px;
+    margin-top: 5px;
     font-weight: bold;
     background-color: #fff;
 }
@@ -588,14 +616,25 @@ video {
 #companyForm {
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
-    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 20px);
+    min-width: calc(50% - 20px);
 }
 
 #companyForm label {
     font-weight: bold;
     margin-bottom: 5px;
-    display: block;
 }
 
 #companyForm input[type="text"],
@@ -622,10 +661,11 @@ video {
     font-size: 16px;
     font-weight: bold;
     width: 100%;
+    margin-top: 15px;
 }
 
 #companyForm input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #a140f1;
 }
 
 .dropzone {
@@ -635,11 +675,13 @@ video {
     text-align: center;
     cursor: pointer;
     margin-top: 15px;
+    flex: 1 1 100%;
 }
 
 .dropzone input[type="file"] {
     display: none;
 }
+
 
 /* Mobile responsive breakpoints */
 @media (max-width: 768px) {

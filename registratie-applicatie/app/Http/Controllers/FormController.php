@@ -36,7 +36,7 @@ class FormController extends Controller
     public function index()
     {
         $forms = Form::latest()->get();
-        return view('index', compact('forms'));
+        return view('dashboard.projecten', compact('forms'));
     }
 
     public function destroy($id)
@@ -45,5 +45,12 @@ class FormController extends Controller
         $form->delete();
 
         return redirect()->route('index')->with('success', 'Contactformulier succesvol verwijderd.');
+    }
+
+    public function show($name)
+    {
+        $form = Form::where('name', $name)->firstOrFail();
+
+        return view('dashboard.show', compact('form'));
     }
 }
