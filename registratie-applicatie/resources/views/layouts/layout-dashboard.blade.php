@@ -54,6 +54,41 @@
                 });
             });
         });
+
+        // Searchbar
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const projectRows = document.querySelectorAll('.project-row');
+            const noResultsMessage = document.getElementById('noResultsMessage');
+
+            searchInput.addEventListener('input', function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                let foundResults = false;
+
+                projectRows.forEach(row => {
+                    const projectNaam = row.querySelector('.project-item:nth-child(1)').textContent
+                        .toLowerCase();
+                    const bedrijf = row.querySelector('.project-item:nth-child(2)').textContent
+                        .toLowerCase();
+                    const contactpersoon = row.querySelector('.project-item:nth-child(3)')
+                        .textContent.toLowerCase();
+
+                    if (projectNaam.includes(searchTerm) || bedrijf.includes(searchTerm) ||
+                        contactpersoon.includes(searchTerm)) {
+                        row.style.display = 'flex'; // Toon rij als de zoekterm overeenkomt
+                        foundResults = true;
+                    } else {
+                        row.style.display = 'none'; // Verberg rij als de zoekterm niet overeenkomt
+                    }
+                });
+
+                if (!foundResults) {
+                    noResultsMessage.style.display = 'block'; // Toon melding als er geen resultaten zijn
+                } else {
+                    noResultsMessage.style.display = 'none'; // Verberg melding als er wel resultaten zijn
+                }
+            });
+        });
     </script>
 </body>
 
