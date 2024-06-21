@@ -4,7 +4,6 @@
 
 @section('content')
     <main>
-        <!-- Header -->
         <header>
             <h1>Aanmelden</h1>
         </header>
@@ -80,6 +79,10 @@
                     <input type="submit" class="button-login" value="Verzenden">
                 </div>
             </form>
+            <div class="back-button">
+                <a href="/" onclick="history.back(); return false;"><i class="fa-solid fa-arrow-left"></i>Ga
+                    terug</a>
+            </div>
         </section>
     </main>
 @endsection

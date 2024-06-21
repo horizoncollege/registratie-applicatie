@@ -156,7 +156,7 @@ header h1 {
     margin-right: 5px;
 }
 
-/* Button login */
+/* Back buttom */
 .button-login {
     background-color: #8230C4;
     border-radius: 6px;
@@ -170,7 +170,11 @@ header h1 {
     outline: none;
 }
 
-/* Back button login */
+/* Back button */
+.back-button {
+    margin-bottom: 20px;
+}
+
 .back-button a {
     color: gray;
     text-decoration: none;
@@ -182,6 +186,21 @@ header h1 {
 }
 
 .back-button a i {
+    margin-right: 12px;
+}
+
+/* Bekijk button */
+.bekijk-button a {
+    color: gray;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.bekijk-button a:hover {
+    color: darkgray;
+}
+
+.bekijk-button a i {
     margin-right: 12px;
 }
 
@@ -597,6 +616,7 @@ video {
 #companyForm {
     background-color: #fff;
     padding: 20px;
+    margin-bottom: 20px;
     border-radius: 16px;
     width: 100%;
     max-width: 800px;

@@ -38,7 +38,7 @@
                     <div class="project-item">{{ $form->contactperson }}</div>
                     <div class="project-item">{{ $form->created_at->format('d-m-Y') }}</div>
                     <div class="project-item">
-                        <div class="project-item back-button">
+                        <div class="project-item bekijk-button">
                             <?php
                             $name = strtolower($form->name);
                             $url = route('project.show', ['name' => urlencode($name)]);
