@@ -14,7 +14,7 @@
             <div class="card-container">
                 <div class="card card-right-profiel">
                     <img class="foto-profiel" src="https://i.postimg.cc/vZQ2rdJL/1683614452741-1.jpg" alt="Profile Picture">
-                    <h3>Tim Abbing</h3>
+                    <h3>{{ Auth::user()->name }}</h3>
                 </div>
 
                 <div class="left-column">

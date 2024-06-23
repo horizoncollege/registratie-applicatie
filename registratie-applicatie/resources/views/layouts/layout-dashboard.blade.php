@@ -28,7 +28,7 @@
                 .classList.contains('active'));
         });
 
-        //Put form data in databse
+        // Put form data in database
         $(document).ready(function() {
             $('#companyForm').on('submit', function(e) {
                 e.preventDefault();
@@ -75,17 +75,17 @@
 
                     if (projectNaam.includes(searchTerm) || bedrijf.includes(searchTerm) ||
                         contactpersoon.includes(searchTerm)) {
-                        row.style.display = 'flex'; // Toon rij als de zoekterm overeenkomt
+                        row.style.display = 'flex';
                         foundResults = true;
                     } else {
-                        row.style.display = 'none'; // Verberg rij als de zoekterm niet overeenkomt
+                        row.style.display = 'none';
                     }
                 });
 
                 if (!foundResults) {
-                    noResultsMessage.style.display = 'block'; // Toon melding als er geen resultaten zijn
+                    noResultsMessage.style.display = 'block';
                 } else {
-                    noResultsMessage.style.display = 'none'; // Verberg melding als er wel resultaten zijn
+                    noResultsMessage.style.display = 'none';
                 }
             });
         });
