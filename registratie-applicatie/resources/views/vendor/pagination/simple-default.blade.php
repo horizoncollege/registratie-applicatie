@@ -1,19 +1,31 @@
 @if ($paginator->hasPages())
     <nav>
-        <ul class="pagination">
+        <div class="pagination">
             {{-- Previous Page Link --}}
             @if ($paginator->onFirstPage())
-                <li class="disabled" aria-disabled="true"><span>@lang('pagination.previous')</span></li>
+                <div class="pagination-button disabled">
+                    <i class="fa-solid fa-angles-left" style="opacity: 0.5;"></i><span
+                        style="color: #999; margin-left: 10px;">Vorige</span>
+                </div>
             @else
-                <li><a href="{{ $paginator->previousPageUrl() }}" rel="prev">@lang('pagination.previous')</a></li>
+                <div class="pagination-button">
+                    <a href="{{ $paginator->previousPageUrl() }}" rel="prev"><i
+                            class="fa-solid fa-angles-left"></i><span style="margin-left: 10px;">Vorige</span></a>
+                </div>
             @endif
 
             {{-- Next Page Link --}}
             @if ($paginator->hasMorePages())
-                <li><a href="{{ $paginator->nextPageUrl() }}" rel="next">@lang('pagination.next')</a></li>
+                <div class="pagination-button">
+                    <a href="{{ $paginator->nextPageUrl() }}" rel="next"><span
+                            style="margin-right: 10px;">Volgende</span><i class="fa-solid fa-angles-right"></i></a>
+                </div>
             @else
-                <li class="disabled" aria-disabled="true"><span>@lang('pagination.next')</span></li>
+                <div class="pagination-button disabled">
+                    <span style="margin-right: 10px; color: #999;">Volgende</span><i class="fa-solid fa-angles-right"
+                        style="opacity: 0.5;"></i>
+                </div>
             @endif
-        </ul>
+        </div>
     </nav>
 @endif

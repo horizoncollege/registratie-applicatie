@@ -11,7 +11,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 // Informatie
 Route::get('/informatie', function () {
-    return view('site.informatie');
+    return view('informatie');
 });
 
 // Dashboard
