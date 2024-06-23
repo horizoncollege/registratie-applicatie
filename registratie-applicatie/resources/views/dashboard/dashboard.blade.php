@@ -21,23 +21,25 @@
 
                     <div class="bottom-row">
                         <div class="card card-left">
-                            <h3>Ingediende projectvoorstellen</h3>
+                            <h3>Lorem ipsum dolor sit amet</h3>
                             <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet velit.</p>
                         </div>
 
                         <div class="card card-left">
-                            <h3>Ingediende projectvoorstellen</h3>
+                            <h3>Lorem ipsum dolor sit amet</h3>
                             <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet velit.</p>
                         </div>
                     </div>
                 </div>
                 <div class="card card-right">
-                    <h3>Ingediende projectvoorstellen</h3>
+                    <h3>Lorem ipsum dolor sit amet</h3>
                     <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet velit.</p>
                 </div>
             </div>
 
-            @include('components.recent-projects', ['projects' => $recentProjects])
+            @include('components.recent-projects', ['projects' => $recentProjects, 'showAllProjectsButton' => true, 'showHeading' => true])
+
+
         </section>
     </main>
 @endsection

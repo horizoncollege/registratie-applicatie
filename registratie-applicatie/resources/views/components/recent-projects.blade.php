@@ -1,9 +1,11 @@
 <div class="bottom-section">
     <div class="heading">
-        <h2>Recente projecten</h2>
-        <div class="url-button">
-            <a href="{{ route('projecten') }}"><i class="fa-solid fa-arrow-right"></i>Bekijk alle projecten</a>
-        </div>
+        @if ($showAllProjectsButton ?? false)
+            <h2>Recente projecten</h2>
+            <div class="url-button">
+                <a href="{{ route('projecten') }}"><i class="fa-solid fa-arrow-right"></i>Bekijk alle projecten</a>
+            </div>
+        @endif
     </div>
     <div class="card-container">
         <div class="left-column">

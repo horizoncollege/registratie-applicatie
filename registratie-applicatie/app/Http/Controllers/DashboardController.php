@@ -17,8 +17,8 @@ class DashboardController extends Controller
 
     public function showAllProjects()
     {
-        // Fetch all projects
-        $allProjects = Form::orderBy('created_at', 'desc')->get();
+        // Fetch projects with pagination, 5 projects per page
+        $allProjects = Form::orderBy('created_at', 'desc')->paginate(5);
 
         return view('dashboard.projecten', compact('allProjects'));
     }

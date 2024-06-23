@@ -22,10 +22,20 @@
         </div>
 
         {{-- Projects --}}
-        @include('components.recent-projects', ['projects' => $allProjects])
+        @include('components.recent-projects', [
+            'projects' => $allProjects,
+            'showAllProjectsButton' => false,
+            'showHeading' => true,
+        ])
 
         <div id="noResultsMessage" style="display: none; padding: 10px;">
             Geen projecten gevonden die aan de zoekcriteria voldoen.
         </div>
+
+        <!-- Pagination links -->
+        <div class="pagination-links">
+            {{ $allProjects->links() }}
+        </div>
+
     </main>
 @endsection
