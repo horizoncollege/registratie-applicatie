@@ -33,12 +33,6 @@ class FormController extends Controller
         return back()->with('success', 'Bedankt voor uw bericht! We zullen spoedig contact met u opnemen.');
     }
 
-    public function index()
-    {
-        $forms = Form::latest()->get();
-        return view('dashboard.projecten', compact('forms'));
-    }
-
     public function destroy($id)
     {
         $form = Form::findOrFail($id);

@@ -3,15 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Form; // Zorg ervoor dat het juiste model is geïmporteerd
+use App\Models\Form; // Make sure the correct model is imported
 
 class DashboardController extends Controller
 {
     public function showDashboard()
     {
-        // Haal de drie meest recente projecten op
+        // Fetch the three most recent projects
         $recentProjects = Form::orderBy('created_at', 'desc')->take(3)->get();
 
-        return view('dashboard.dashboard-2', compact('recentProjects'));
+        return view('dashboard.dashboard', compact('recentProjects'));
+    }
+
+    public function showAllProjects()
+    {
+        // Fetch projects with pagination, 5 projects per page
+        $allProjects = Form::orderBy('created_at', 'desc')->paginate(10);
+
+        return view('dashboard.projecten', compact('allProjects'));
     }
 }

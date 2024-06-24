@@ -7,6 +7,7 @@
     <title>@yield('title', 'Dashboard')</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <script src="scripts.js"></script>
     <script src="https://kit.fontawesome.com/2842fd03de.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -28,7 +29,7 @@
                 .classList.contains('active'));
         });
 
-        //Put form data in databse
+        // Put form data in database
         $(document).ready(function() {
             $('#companyForm').on('submit', function(e) {
                 e.preventDefault();
@@ -75,17 +76,17 @@
 
                     if (projectNaam.includes(searchTerm) || bedrijf.includes(searchTerm) ||
                         contactpersoon.includes(searchTerm)) {
-                        row.style.display = 'flex'; // Toon rij als de zoekterm overeenkomt
+                        row.style.display = 'flex';
                         foundResults = true;
                     } else {
-                        row.style.display = 'none'; // Verberg rij als de zoekterm niet overeenkomt
+                        row.style.display = 'none';
                     }
                 });
 
                 if (!foundResults) {
-                    noResultsMessage.style.display = 'block'; // Toon melding als er geen resultaten zijn
+                    noResultsMessage.style.display = 'block';
                 } else {
-                    noResultsMessage.style.display = 'none'; // Verberg melding als er wel resultaten zijn
+                    noResultsMessage.style.display = 'none';
                 }
             });
         });

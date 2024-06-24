@@ -159,7 +159,8 @@ header h1 {
     margin-right: 5px;
 }
 
-/* Back buttom */
+
+/* Button Login */
 .button-login {
     background-color: #8230C4;
     border-radius: 6px;
@@ -173,7 +174,7 @@ header h1 {
     outline: none;
 }
 
-/* Back button */
+/* Button Back */
 .back-button {
     margin-bottom: 20px;
 }
@@ -192,7 +193,7 @@ header h1 {
     margin-right: 12px;
 }
 
-/* Bekijk button */
+/* Button Bekijk */
 .bekijk-button a {
     color: gray;
     text-decoration: none;
@@ -207,7 +208,7 @@ header h1 {
     margin-right: 12px;
 }
 
-/* URL button */
+/* Button URL */
 .url-button {
     display: flex;
     align-items: center;
@@ -225,6 +226,42 @@ header h1 {
 
 .url-button a i {
     margin-right: 12px;
+}
+
+/* Button Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pagination-button {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.pagination-button span {
+    color: #8230C4;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.pagination-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.pagination-button span:hover {
+    color: #9f53dc;
+}
+
+.pagination-button span i {
+    margin-right: 12px;
+}
+
+.pagination-button.disabled i {
+    opacity: 0.5;
 }
 
 /* Heading+item */
