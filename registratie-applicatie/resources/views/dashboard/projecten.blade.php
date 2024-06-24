@@ -28,7 +28,8 @@
             'showHeading' => true,
         ])
 
-        <div id="noResultsMessage" style="display: none; padding: 10px;">
+        <div id="noResultsMessage" style="display: none; padding: 10px;
+        margin-bottom: 50px;">
             Geen projecten gevonden die aan de zoekcriteria voldoen.
         </div>
 
