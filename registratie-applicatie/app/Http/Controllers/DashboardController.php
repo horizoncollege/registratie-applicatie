@@ -3,23 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Form; // Make sure the correct model is imported
+use App\Models\Form;
+use Carbon\Carbon;
 
 class DashboardController extends Controller
 {
     public function showDashboard()
     {
-        // Fetch the three most recent projects
         $recentProjects = Form::orderBy('created_at', 'desc')->take(3)->get();
-
         return view('dashboard.dashboard', compact('recentProjects'));
     }
 
-    public function showAllProjects()
+    public function showAllProjects(Request $request)
     {
-        // Fetch projects with pagination, 5 projects per page
-        $allProjects = Form::orderBy('created_at', 'desc')->paginate(10);
+        $searchTerm = $request->input('search');
+        $query = Form::query();
 
+        if ($searchTerm) {
+            if (preg_match('/\d{2}-\d{2}-\d{4}/', $searchTerm)) {
+                // Convert the date format to Y-m-d for database querying
+                $date = Carbon::createFromFormat('d-m-Y', $searchTerm)->format('Y-m-d');
+                $query->whereDate('created_at', $date);
+            } else {
+                $query->where(function ($q) use ($searchTerm) {
+                    $q->where('name', 'LIKE', '%' . $searchTerm . '%')
+                        ->orWhere('company', 'LIKE', '%' . $searchTerm . '%')
+                        ->orWhere('contactperson', 'LIKE', '%' . $searchTerm . '%');
+                });
+            }
+        }
+
+        $allProjects = $query->orderBy('created_at', 'desc')->paginate(10);
         return view('dashboard.projecten', compact('allProjects'));
     }
 }

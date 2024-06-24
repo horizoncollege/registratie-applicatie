@@ -11,8 +11,13 @@
         {{-- Searchbar --}}
         <div class="top-content">
             <div class="searchbar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="searchInput" placeholder="Zoeken">
+                <form action="{{ route('projecten') }}" method="GET" class="searchbar-form">
+                    <div class="searchbar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="searchInput" name="search" placeholder="Zoeken"
+                            value="{{ request('search') }}">
+                    </div>
+                </form>
             </div>
             {{-- Nieuw project button --}}
             <a href="/dashboard/aanmelden" class="button-new-project">
@@ -28,14 +33,9 @@
             'showHeading' => true,
         ])
 
-        <div id="noResultsMessage" style="display: none; padding: 10px;
-        margin-bottom: 50px;">
-            Geen projecten gevonden die aan de zoekcriteria voldoen.
-        </div>
-
         <!-- Pagination links -->
         <div class="pagination-links">
-            {{ $allProjects->links() }}
+            {{ $allProjects->appends(['search' => request('search')])->links() }}
         </div>
 
     </main>
