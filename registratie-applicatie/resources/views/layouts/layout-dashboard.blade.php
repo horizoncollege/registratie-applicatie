@@ -57,36 +57,17 @@
         });
 
         // Searchbar
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', () => {
             const searchInput = document.getElementById('searchInput');
-            const projectRows = document.querySelectorAll('.project-row');
-            const noResultsMessage = document.getElementById('noResultsMessage');
+            const form = searchInput.closest('form');
 
-            searchInput.addEventListener('input', function() {
-                const searchTerm = searchInput.value.toLowerCase();
-                let foundResults = false;
-
-                projectRows.forEach(row => {
-                    const projectNaam = row.querySelector('.project-item:nth-child(1)').textContent
-                        .toLowerCase();
-                    const bedrijf = row.querySelector('.project-item:nth-child(2)').textContent
-                        .toLowerCase();
-                    const contactpersoon = row.querySelector('.project-item:nth-child(3)')
-                        .textContent.toLowerCase();
-
-                    if (projectNaam.includes(searchTerm) || bedrijf.includes(searchTerm) ||
-                        contactpersoon.includes(searchTerm)) {
-                        row.style.display = 'flex';
-                        foundResults = true;
-                    } else {
-                        row.style.display = 'none';
+            searchInput.addEventListener('keyup', event => {
+                if (event.key === 'Enter') {
+                    const searchTerm = searchInput.value.trim();
+                    if (searchTerm !== '') {
+                        // Perform search based on searchTerm
+                        console.log('Performing search for:', searchTerm);
                     }
-                });
-
-                if (!foundResults) {
-                    noResultsMessage.style.display = 'block';
-                } else {
-                    noResultsMessage.style.display = 'none';
                 }
             });
         });
