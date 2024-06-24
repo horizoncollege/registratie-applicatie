@@ -50,6 +50,10 @@ header h1 {
     color: #000000;
 }
 
+.login-right h1 {
+    margin-bottom: 5px;
+}
+
 .bottom-section h2 {
     font-size: 23px;
 }
@@ -201,7 +205,7 @@ header h1 {
 }
 
 .bekijk-button a:hover {
-    color: darkgray;
+    color: #8230C4;
 }
 
 .bekijk-button a i {
@@ -225,6 +229,26 @@ header h1 {
 }
 
 .url-button a i {
+    margin-right: 12px;
+}
+
+/* Button URL Login */
+.url-button-login {
+    display: flex;
+    align-items: center;
+}
+
+.url-button-login a {
+    color: #8230C4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.url-button-login a:hover {
+    color: #9f53dc;
+}
+
+.url-button-login a i {
     margin-right: 12px;
 }
 
@@ -609,6 +633,7 @@ video {
 
 .searchbar-form i.fa-magnifying-glass {
     margin-left: 10px;
+    margin-right: 5px;
     font-size: 15px;
     color: #888;
 }
@@ -624,8 +649,8 @@ video {
 }
 
 .searchbar-form input[type="text"]::placeholder {
-    color: #bbb;
-    font-size: 15px;
+    color: gray;
+    font-size: 16px;
 }
 
 /* Projects */

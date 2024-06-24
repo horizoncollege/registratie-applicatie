@@ -25,7 +25,7 @@
                             <source src="{{ asset('video/Talland_promo_vid.mp4') }}" type="video/mp4">
                         </video>
                         <div class="card card-left">
-                            <h3>Ingediende projectvoorstellen</h3>
+                            <h3>Lorem ipsum dolor sit amet</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim itaque alias cumque
                                 voluptates voluptate eum odit sed nulla voluptatum porro iusto, iste, dolorum, culpa
                                 quas? Facere, vel sequi at libero, in ut facilis cum eius perferendis repudiandae itaque
@@ -41,7 +41,7 @@
             <div class="card-container">
                 <div class="left-column">
                     <div class="card card-left">
-                        <h3>Recente projecten</h3>
+                        <h3>Lorem ipsum dolor sit amet</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim itaque alias cumque
                             voluptates voluptate eum odit sed nulla voluptatum porro iusto, iste, dolorum, culpa
                             quas? Facere, vel sequi at libero, in ut facilis cum eius perferendis repudiandae itaque

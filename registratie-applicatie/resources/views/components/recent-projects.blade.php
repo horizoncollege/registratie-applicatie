@@ -32,7 +32,7 @@
                                     $url = str_replace('+', '%20', $url);
                                     ?>
                                     <a href="{{ $url }}">
-                                        <i class="fa-solid fa-arrow-right"></i> Bekijk project
+                                        <i class="fa-solid fa-arrow-right"></i> Open project
                                     </a>
                                 </div>
                             </div>
