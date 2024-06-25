@@ -25,17 +25,17 @@
 
                         <div class="container-profiel">
                             <div class="column-profiel">
-                                <a><i class="fa-regular fa-envelope"></i> timstefabbing@gmail.com</a>
-                                <a><i class="fa-solid fa-phone"></i> +31 06 123 45 678</a>
-                                <a><i class="fa-solid fa-location-dot"></i> Dille 28, 1705 RG Heerhugowaard</a>
-                                <a><i class="fa-solid fa-briefcase"></i> Functie</a>
+                                <a><i class="fa-regular fa-envelope"></i> {{ Auth::user()->email }}</a>
+                                <a><i class="fa-solid fa-phone"></i> {{ Auth::user()->phone }}</a>
+                                <a><i class="fa-solid fa-location-dot"></i> {{ Auth::user()->place }}</a>
+                                <a><i class="fa-solid fa-briefcase"></i> {{ Auth::user()->function }}</a>
                             </div>
 
                             <div class="column-profiel">
-                                <a><i class="fa-solid fa-address-book"></i> Contactpersoon</a>
-                                <a><i class="fa-regular fa-building"></i> Bedrijfsactiviteit</a>
-                                <a><i class="fa-solid fa-book-open"></i> KVK-nummer</a>
-                                <a><i class="fa-solid fa-globe"></i> Website</a>
+                                <a><i class="fa-solid fa-address-book"></i> {{ Auth::user()->contactperson }}</a>
+                                <a><i class="fa-regular fa-building"></i> {{ Auth::user()->company }}</a>
+                                <a><i class="fa-solid fa-book-open"></i> {{ Auth::user()->kvk_number }}</a>
+                                <a><i class="fa-solid fa-globe"></i> {{ Auth::user()->website }}</a>
                             </div>
                         </div>
 
