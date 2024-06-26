@@ -40,11 +40,4 @@ class FormController extends Controller
 
         return redirect()->route('index')->with('success', 'Contactformulier succesvol verwijderd.');
     }
-
-    public function show($name)
-    {
-        $form = Form::where('name', $name)->firstOrFail();
-
-        return view('dashboard.show', compact('form'));
-    }
 }
