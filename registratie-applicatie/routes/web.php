@@ -33,7 +33,7 @@ Route::get('/dashboard/aanmelden', function () {
 
 // Projecten
 Route::get('/dashboard/projecten', [DashboardController::class, 'showAllProjects'])->name('projecten');
-Route::get('/dashboard/projecten/{name}', [DashboardController::class, 'show'])->name('project.show'); // Update this line
+Route::get('/dashboard/projecten/{name}', [DashboardController::class, 'show'])->name('project.show');
 
 // Form routes
 Route::get('/form', [FormController::class, 'index'])->name('form.index');

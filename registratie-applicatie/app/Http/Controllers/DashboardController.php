@@ -21,7 +21,6 @@ class DashboardController extends Controller
 
         if ($searchTerm) {
             if (preg_match('/\d{2}-\d{2}-\d{4}/', $searchTerm)) {
-                // Convert the date format to Y-m-d for database querying
                 $date = Carbon::createFromFormat('d-m-Y', $searchTerm)->format('Y-m-d');
                 $query->whereDate('created_at', $date);
             } else {

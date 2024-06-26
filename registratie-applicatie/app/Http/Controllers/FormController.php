@@ -30,7 +30,7 @@ class FormController extends Controller
 
         Form::create($validated);
 
-        return back()->with('success', 'Bedankt voor uw bericht! We zullen spoedig contact met u opnemen.');
+        return back()->with('success');
     }
 
     public function destroy($id)
@@ -38,6 +38,6 @@ class FormController extends Controller
         $form = Form::findOrFail($id);
         $form->delete();
 
-        return redirect()->route('index')->with('success', 'Contactformulier succesvol verwijderd.');
+        return redirect()->route('projecten')->with('success', 'Project succesvol verwijderd.');
     }
 }
