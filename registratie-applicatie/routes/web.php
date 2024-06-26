@@ -9,31 +9,22 @@ use App\Http\Controllers\DashboardController;
 // Index
 Route::get('/', [HomeController::class, 'index']);
 
-// Informatie
-Route::get('/informatie', function () {
-    return view('informatie');
-});
-
 // Dashboard
 Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard');
+
+// Projecten
+Route::get('/dashboard/projecten', [DashboardController::class, 'showAllProjects'])->name('projecten');
+Route::get('/dashboard/projecten/{name}', [DashboardController::class, 'show'])->name('project.show');
 
 // Additional Dashboard pages
 Route::get('/dashboard/beoordelen', function () {
     return view('dashboard.beoordelen');
 });
 
-Route::get('/dashboard/testimonials', function () {
-    return view('dashboard.testimonials');
-});
-
 // Aanmeldformulier
 Route::get('/dashboard/aanmelden', function () {
     return view('dashboard.aanmeldformulier');
 });
-
-// Projecten
-Route::get('/dashboard/projecten', [DashboardController::class, 'showAllProjects'])->name('projecten');
-Route::get('/dashboard/projecten/{name}', [DashboardController::class, 'show'])->name('project.show');
 
 // Form routes
 Route::get('/form', [FormController::class, 'index'])->name('form.index');
@@ -43,6 +34,11 @@ Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('form.dest
 // Profiel
 Route::get('/dashboard/profiel', function () {
     return view('dashboard.profiel');
+});
+
+// Informatie
+Route::get('/informatie', function () {
+    return view('informatie');
 });
 
 // Breeze

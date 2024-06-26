@@ -16,7 +16,6 @@
         <li><a href="/dashboard"><i class="fa fa-fw fa-home"></i>Dashboard</a></li>
         <li><a href="/dashboard/projecten"><i class="fa-solid fa-diagram-project"></i>Projecten</a></li>
         <li><a href="/dashboard/beoordelen"><i class="fa-solid fa-list-check"></i>Beoordelen</a></li>
-        <li><a href="/dashboard/testimonials"><i class="fa-regular fa-message"></i>Testimonials</a></li>
         <li><a href="/dashboard/profiel"><i class="fa-solid fa-user"></i>Profiel</a></li>
         <li>
             <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
