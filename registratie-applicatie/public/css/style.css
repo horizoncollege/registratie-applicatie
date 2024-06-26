@@ -183,19 +183,49 @@ header h1 {
     margin-bottom: 20px;
 }
 
-.back-button a {
+.button-group .back-button {
+    margin-bottom: 0px;
+}
+
+.back-button a, .delete-button button {
     color: gray;
     text-decoration: none;
     font-size: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
 }
 
 .back-button a:hover {
     color: #9f53dc;
 }
 
-.back-button a i {
+.delete-button button {
+    color: #dc5353;
+}
+
+.delete-button button:hover {
+    color: red;
+}
+
+.back-button a i, .delete-button button i {
     margin-right: 12px;
 }
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.delete-button form {
+    margin: 0;
+}
+
+
 
 /* Button Bekijk */
 .bekijk-button a {

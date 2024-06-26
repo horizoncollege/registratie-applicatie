@@ -21,7 +21,6 @@ class DashboardController extends Controller
 
         if ($searchTerm) {
             if (preg_match('/\d{2}-\d{2}-\d{4}/', $searchTerm)) {
-                // Convert the date format to Y-m-d for database querying
                 $date = Carbon::createFromFormat('d-m-Y', $searchTerm)->format('Y-m-d');
                 $query->whereDate('created_at', $date);
             } else {
@@ -35,5 +34,11 @@ class DashboardController extends Controller
 
         $allProjects = $query->orderBy('created_at', 'desc')->paginate(10);
         return view('dashboard.projecten', compact('allProjects'));
+    }
+
+    public function show($name)
+    {
+        $form = Form::where('name', $name)->firstOrFail();
+        return view('dashboard.show', compact('form'));
     }
 }

@@ -47,9 +47,19 @@
                 <div class="project-item">{{ $form->updated_at->format('d-m-Y') }}</div>
             </div>
         </div>
-        <div class="back-button">
-            <a href="/" onclick="history.back(); return false;"><i class="fa-solid fa-arrow-left"></i>Ga
-                terug</a>
+        <div class="button-group">
+            <div class="back-button">
+                <a href="/" onclick="history.back(); return false;"><i class="fa-solid fa-arrow-left"></i>Ga terug</a>
+            </div>
+
+            {{-- Delete Button --}}
+            <div class="delete-button">
+                <form action="{{ route('form.destroy', $form->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit"><i class="fa-solid fa-trash"></i>Verwijderen</button>
+                </form>
+            </div>
         </div>
     </main>
 @endsection
