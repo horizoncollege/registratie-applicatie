@@ -4,11 +4,11 @@
     </header>
 
     <h3 class="header-title">
-        {{ __('Profile Information') }}
+        {{ __('Profiel informatie') }}
     </h3>
 
     <p class="header-subtitle">
-        Update your account's profile information and email address.
+        Update de profielgegevens en het e-mailadres van uw account.
     </p>
 
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">
@@ -28,7 +28,7 @@
         </div>
 
         <div class="form-group">
-            <label for="email" class="form-label">{{ __('Email') }}</label>
+            <label for="email" class="form-label">{{ __('E-mail') }}</label>
             <input id="email" name="email" type="email" class="form-input" value="{{ old('email', $user->email) }}" required autocomplete="username" />
             @error('email')
                 <span class="form-error">{{ $message }}</span>
@@ -37,16 +37,16 @@
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                 <div class="email-verification">
                     <p class="email-unverified">
-                        {{ __('Your email address is unverified.') }}
+                        {{ __('Uw e-mailadres is niet geverifieerd.') }}
 
                         <button form="send-verification" class="resend-button">
-                            {{ __('Click here to re-send the verification email.') }}
+                            {{ __('Klik hier om de verificatie-e-mail opnieuw te verzenden.') }}
                         </button>
                     </p>
 
                     @if (session('status') === 'verification-link-sent')
                         <p class="verification-sent">
-                            {{ __('A new verification link has been sent to your email address.') }}
+                            {{ __('Er is een nieuwe verificatielink naar uw e-mailadres verzonden.') }}
                         </p>
                     @endif
                 </div>
@@ -58,7 +58,7 @@
 
             @if (session('status') === 'profile-updated')
                 <p class="status-message" x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)">
-                    {{ __('Saved.') }}
+                    {{ __('Opgeslagen.') }}
                 </p>
             @endif
         </div>
