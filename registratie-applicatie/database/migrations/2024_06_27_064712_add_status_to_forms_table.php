@@ -9,7 +9,7 @@ class AddStatusToFormsTable extends Migration
     public function up()
     {
         Schema::table('forms', function (Blueprint $table) {
-            $table->string('status')->default('pending'); // or whatever default value you prefer
+            $table->string('status')->default('pending');
         });
     }
 

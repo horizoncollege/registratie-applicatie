@@ -32,6 +32,7 @@
             'pendingProjects' => $pendingProjects,
             'rejectedProjects' => $rejectedProjects,
             'showAllProjectsButton' => false,
+            'showHeaderText' => true,
             'showHeading' => true,
         ])
 
