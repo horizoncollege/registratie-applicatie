@@ -10,6 +10,20 @@ body {
     min-height: 100vh;
 }
 
+.header-with-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-block {
+    background-color: #8230C4;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Header */
 header {
     background-color: #F2F5FD;
     color: #fff;
@@ -187,7 +201,8 @@ header h1 {
     margin-bottom: 0px;
 }
 
-.back-button a, .delete-button button {
+.back-button a,
+.delete-button button {
     color: gray;
     text-decoration: none;
     font-size: 15px;
@@ -210,7 +225,8 @@ header h1 {
     color: red;
 }
 
-.back-button a i, .delete-button button i {
+.back-button a i,
+.delete-button button i {
     margin-right: 12px;
 }
 
@@ -220,12 +236,6 @@ header h1 {
     align-items: center;
     margin-top: 20px;
 }
-
-.delete-button form {
-    margin: 0;
-}
-
-
 
 /* Button Bekijk */
 .bekijk-button a {
@@ -683,6 +693,26 @@ video {
     font-size: 16px;
 }
 
+
+/* Projects Status */
+.bottom-section .card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-section .header-row,
+.project-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-section .header-item,
+.project-item {
+    flex: 1;
+    text-align: left;
+}
+
+
 /* Projects */
 .projects {
     width: 100%;
@@ -796,6 +826,16 @@ video {
     background-color: #a140f1;
 }
 
+.delete-button form {
+    margin: 0;
+}
+
+.hidden-row {
+    display: none;
+}
+
+
+/* Dropzone */
 .dropzone {
     border: 2px dashed #ccc;
     border-radius: 4px;

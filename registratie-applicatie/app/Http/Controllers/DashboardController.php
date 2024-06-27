@@ -33,8 +33,23 @@ class DashboardController extends Controller
         }
 
         $allProjects = $query->orderBy('created_at', 'desc')->paginate(10);
-        return view('dashboard.projecten', compact('allProjects'));
+
+        $approvedProjects = $allProjects->filter(function ($project) {
+            return $project->status === 'approved';
+        });
+
+        $pendingProjects = $allProjects->filter(function ($project) {
+            return $project->status === 'pending';
+        });
+
+        $rejectedProjects = $allProjects->filter(function ($project) {
+            return $project->status === 'rejected';
+        });
+
+        return view('dashboard.projecten', compact('allProjects', 'approvedProjects', 'pendingProjects', 'rejectedProjects'));
     }
+
+
 
     public function show($name)
     {

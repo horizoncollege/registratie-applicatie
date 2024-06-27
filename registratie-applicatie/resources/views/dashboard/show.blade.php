@@ -4,8 +4,21 @@
 
 @section('content')
     <main>
-        <header>
+        <header class="header-with-status">
             <h1>{{ $form->name }}</h1>
+            <div class="status-block">
+                <form action="{{ route('form.updateStatus', $form->id) }}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <label for="status">Status:</label>
+                    <select name="status" id="status">
+                        <option value="pending" {{ $form->status == 'pending' ? 'selected' : '' }}>Pending</option>
+                        <option value="approved" {{ $form->status == 'approved' ? 'selected' : '' }}>Approved</option>
+                        <option value="rejected" {{ $form->status == 'rejected' ? 'selected' : '' }}>Rejected</option>
+                    </select>
+                    <button type="submit">Update</button>
+                </form>
+            </div>
         </header>
 
         {{-- Projects --}}

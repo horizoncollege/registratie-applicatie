@@ -21,6 +21,7 @@ class FormController extends Controller
             'activity' => 'required',
             'workers' => 'required',
             'kvk_number' => 'required',
+            'status' => 'required', // Add this line
             // 'fileInput' => 'required|file',
         ]);
 
@@ -39,5 +40,18 @@ class FormController extends Controller
         $form->delete();
 
         return redirect()->route('projecten')->with('success', 'Project succesvol verwijderd.');
+    }
+
+    public function updateStatus(Request $request, $id)
+    {
+        $form = Form::findOrFail($id);
+
+        $validated = $request->validate([
+            'status' => 'required|string',
+        ]);
+
+        $form->update($validated);
+
+        return back()->with('success', 'Status succesvol bijgewerkt.');
     }
 }
