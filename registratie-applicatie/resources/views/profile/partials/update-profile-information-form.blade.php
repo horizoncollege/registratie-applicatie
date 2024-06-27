@@ -1,15 +1,15 @@
-@extends('layouts.layout-dashboard')
-
-<section>
+<section class="profile-section">
     <header>
-        <h2 style="font-size: 1.5rem; font-weight: 500; color: #111827;">
-            {{ __('Profile Information') }}
-        </h2>
-
-        <p style="margin-top: 0.25rem; font-size: 0.875rem; color: #4B5563;">
-            {{ __("Update your account's profile information and email address.") }}
-        </p>
+        
     </header>
+
+    <h3 class="header-title">
+        {{ __('Profile Information') }}
+    </h3>
+
+    <p class="header-subtitle">
+        Update your account's profile information and email address.
+    </p>
 
     <form id="send-verification" method="post" action="{{ route('verification.send') }}">
         @csrf
@@ -19,29 +19,33 @@
         @csrf
         @method('patch')
 
-        <div>
-            <x-input-label for="name" :value="__('Name')" class="form-label" />
-            <x-text-input id="name" name="name" type="text" class="form-input" :value="old('name', $user->name)" required autofocus autocomplete="name" />
-            <x-input-error class="form-error" :messages="$errors->get('name')" />
+        <div class="form-group">
+            <label for="name" class="form-label">{{ __('Naam') }}</label>
+            <input id="name" name="name" type="text" class="form-input" value="{{ old('name', $user->name) }}" required autofocus autocomplete="name" />
+            @error('name')
+                <span class="form-error">{{ $message }}</span>
+            @enderror
         </div>
 
-        <div>
-            <x-input-label for="email" :value="__('Email')" class="form-label" />
-            <x-text-input id="email" name="email" type="email" class="form-input" :value="old('email', $user->email)" required autocomplete="username" />
-            <x-input-error class="form-error" :messages="$errors->get('email')" />
+        <div class="form-group">
+            <label for="email" class="form-label">{{ __('Email') }}</label>
+            <input id="email" name="email" type="email" class="form-input" value="{{ old('email', $user->email) }}" required autocomplete="username" />
+            @error('email')
+                <span class="form-error">{{ $message }}</span>
+            @enderror
 
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
-                <div>
-                    <p style="font-size: 0.875rem; margin-top: 0.5rem; color: #4B5563;">
+                <div class="email-verification">
+                    <p class="email-unverified">
                         {{ __('Your email address is unverified.') }}
 
-                        <button form="send-verification" style="text-decoration: underline; font-size: 0.875rem; color: #4B5563; cursor: pointer; outline: none; border: none; background-color: transparent;">
+                        <button form="send-verification" class="resend-button">
                             {{ __('Click here to re-send the verification email.') }}
                         </button>
                     </p>
 
                     @if (session('status') === 'verification-link-sent')
-                        <p style="font-weight: 500; font-size: 0.875rem; margin-top: 0.5rem; color: #10B981;">
+                        <p class="verification-sent">
                             {{ __('A new verification link has been sent to your email address.') }}
                         </p>
                     @endif
@@ -49,11 +53,11 @@
             @endif
         </div>
 
-        <div style="display: flex; align-items: center; gap: 1rem;">
-            <button type="submit" class="save-button">{{ __('Save') }}</button>
+        <div class="form-actions">
+            <button type="submit" class="save-button">{{ __('Opslaan') }}</button>
 
             @if (session('status') === 'profile-updated')
-                <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)" class="status-message">
+                <p class="status-message" x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)">
                     {{ __('Saved.') }}
                 </p>
             @endif
