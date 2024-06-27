@@ -10,7 +10,7 @@ class DashboardController extends Controller
 {
     public function showDashboard()
     {
-        $recentProjects = Form::orderBy('created_at', 'desc')->take(3)->get();
+        $recentProjects = Form::where('status', 'approved')->orderBy('created_at', 'desc')->take(3)->get();
         return view('dashboard.dashboard', compact('recentProjects'));
     }
 

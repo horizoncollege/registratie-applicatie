@@ -37,8 +37,13 @@
                 </div>
             </div>
 
-            @include('components.recent-projects', ['projects' => $recentProjects, 'showAllProjectsButton' => true, 'showHeading' => true])
-
+            {{-- Update --}}
+            @include('components.recent-projects', [
+                'approvedProjects' => $recentProjects,
+                'showHeaderText' => false,
+                'showAllProjectsButton' => true,
+                'showHeading' => true,
+            ])
 
         </section>
     </main>
