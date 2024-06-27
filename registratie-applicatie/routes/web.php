@@ -29,6 +29,7 @@ Route::get('/dashboard/aanmelden', function () {
 // Form routes
 Route::get('/form', [FormController::class, 'index'])->name('form.index');
 Route::post('/form/store', [FormController::class, 'store'])->name('form.store');
+Route::patch('/form/{id}/status', [FormController::class, 'updateStatus'])->name('form.updateStatus');
 Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('form.destroy');
 
 // Profiel

@@ -28,7 +28,9 @@
 
         {{-- Projects --}}
         @include('components.recent-projects', [
-            'projects' => $allProjects,
+            'approvedProjects' => $approvedProjects,
+            'pendingProjects' => $pendingProjects,
+            'rejectedProjects' => $rejectedProjects,
             'showAllProjectsButton' => false,
             'showHeading' => true,
         ])

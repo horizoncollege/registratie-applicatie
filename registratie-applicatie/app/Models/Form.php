@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Form extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'name',
         'company',
@@ -18,6 +21,7 @@ class Form extends Model
         'activity',
         'workers',
         'kvk_number',
-        'fileInput'
+        'status',
+        'fileInput',
     ];
 }

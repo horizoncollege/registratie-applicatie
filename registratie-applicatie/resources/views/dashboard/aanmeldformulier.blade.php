@@ -13,7 +13,7 @@
             @if (session('success'))
                 <div>{{ session('success') }}</div>
             @endif
-            <form id="companyForm" enctype="multipart/form-data">
+            <form id="companyForm" action="{{ route('form.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-row">
                     <label for="name">Naam:</label>
@@ -75,13 +75,16 @@
                     <input type="file" id="fileInput" name="fileInput">
                 </div>
 
+                <div class="form-row" style="display: none;">
+                    <input type="hidden" name="status" value="pending">
+                </div>
+
                 <div class="form-row">
                     <input type="submit" class="button-login" value="Verzenden">
                 </div>
             </form>
             <div class="back-button">
-                <a href="/" onclick="history.back(); return false;"><i class="fa-solid fa-arrow-left"></i>Ga
-                    terug</a>
+                <a href="/" onclick="history.back(); return false;"><i class="fa-solid fa-arrow-left"></i>Ga terug</a>
             </div>
         </section>
     </main>
