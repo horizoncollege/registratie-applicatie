@@ -20,7 +20,7 @@
                 <div class="left-column">
                     <div class="card card-left-profiel">
                         <div class="h3-profiel">
-                            <h2>Jouw gegevens</h2>
+                            <h3>Jouw gegevens</h3>
                         </div>
 
                         <div class="container-profiel">
@@ -40,8 +40,8 @@
                         </div>
 
                         <div class="account-options-profiel">
-                            <a href="#">Wachtwoord wijzigen</a>
-                            <a href="#">Account verwijderen</a>
+                            <a href="{{ url('dashboard/profile') }}">Wachtwoord wijzigen</a>
+                            <a href="{{ url('dashboard/profile') }}">Account verwijderen</a>
                         </div>
                     </div>
                 </div>

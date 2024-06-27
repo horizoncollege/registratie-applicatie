@@ -612,7 +612,7 @@ video {
     display: block;
     margin: 10px 0;
     color: #C5C5C5;
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Poppins', sans-serif;
     margin-left: 10px;
 
@@ -636,7 +636,7 @@ video {
 }
 
 .h3-profiel {
-    margin-top: -15px;
+    margin-top: 15px;
     margin-bottom: 10px;
     text-align: start;
     margin-left: 20px;
@@ -850,6 +850,149 @@ video {
     display: none;
 }
 
+/* profiel-edit */
+header {
+    background: none;
+    background-color: none;
+}
+
+.profile-section, 
+.password-section, 
+.delete-account-section {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.header-title {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+.header-subtitle {
+    margin-top: 0.25rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    background-color: none;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.form-input {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    color: #111827;
+}
+
+.form-error {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #ef4444;
+}
+
+.email-verification {
+    margin-top: 1rem;
+}
+
+.email-unverified {
+    font-size: 0.875rem;
+    color: #4B5563;
+}
+
+.resend-button {
+    text-decoration: underline;
+    font-size: 0.875rem;
+    color: #4B5563;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.verification-sent {
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    color: #10B981;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.save-button {
+    background-color: #8230C4;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    padding: 8px 30px;
+    text-decoration: none;
+}
+
+.status-message {
+    font-size: 0.875rem;
+    color: #10B981;
+}
+
+.danger-button {
+    background-color: #8230C4;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    padding: 8px 30px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.secondary-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
 
 /* Mobile responsive breakpoints */
 @media (max-width: 768px) {
@@ -1042,3 +1185,5 @@ video {
         padding-right: 20px;
     }
 }
+
+
