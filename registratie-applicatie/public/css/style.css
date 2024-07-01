@@ -56,7 +56,7 @@ header h1 {
 }
 
 .bottom-section h2 {
-    font-size: 23px;
+    font-size: 21px;
 }
 
 .card h3 {
@@ -163,7 +163,6 @@ header h1 {
 .button-new-project i {
     margin-right: 5px;
 }
-
 
 /* Button Login */
 .button-login {
@@ -684,7 +683,6 @@ video {
     font-size: 16px;
 }
 
-
 /* Projects Status */
 .bottom-section .card-container {
     display: flex;
@@ -706,7 +704,7 @@ video {
 /* Projects */
 .projects {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border-radius: 5px;
 }
 
