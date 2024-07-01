@@ -23,40 +23,52 @@
 
         {{-- Projects --}}
         <div class="projects">
-            <div class="header-row">
-                <div class="header-item">Bedrijf</div>
-                <div class="header-item">KVK-nummer</div>
-                <div class="header-item">Plaats</div>
-                <div class="header-item">Activiteit</div>
-            </div>
-            <div class="project-row">
+            <div class="middle-row">
+                <div class="header-item"><b>Bedrijf</b></div>
                 <div class="project-item">{{ $form->company }}</div>
+            </div>
+            <div class="middle-row">
+                <div class="header-item"><b>KVK-nummer</b></div>
                 <div class="project-item">{{ $form->kvk_number }}</div>
+            </div>
+            <div class="middle-row">
+                <div class="header-item"><b>Plaats</b></div>
                 <div class="project-item">{{ $form->place }}</div>
+            </div>
+            <div class="middle-row">
+                <div class="header-item"><b>Activiteit</b></div>
                 <div class="project-item">{{ $form->activity }}</div>
             </div>
             <div class="middle-row">
-                <div class="header-item">Medewerkers</div>
-                <div class="header-item">Website</div>
-                <div class="header-item">Contactpersoon</div>
-                <div class="header-item">Functie</div>
-            </div>
-            <div class="project-row">
+                <div class="header-item"><b>Medewerkers</b></div>
                 <div class="project-item">{{ $form->workers }}</div>
+            </div>
+            <div class="middle-row">
+                <div class="header-item"><b>Website</b></div>
                 <div class="project-item">{{ $form->website }}</div>
+            </div>
+            <div class="middle-row">
+                <div class="header-item"><b>Contactpersoon</b></div>
                 <div class="project-item">{{ $form->contactperson }}</div>
+            </div>
+            <div class="middle-row">
+                <div class="header-item"><b>Functie</b></div>
                 <div class="project-item">{{ $form->function }}</div>
             </div>
             <div class="middle-row">
-                <div class="header-item">Telefoonnummer</div>
-                <div class="header-item">E-mailadres</div>
-                <div class="header-item">Aangemaakt</div>
-                <div class="header-item">Laatste wijziging</div>
-            </div>
-            <div class="project-row">
+                <div class="header-item"><b>Telefoonnummer</b></div>
                 <div class="project-item">{{ $form->phone }}</div>
+            </div>
+            <div class="middle-row">
+                <div class="header-item"><b>E-mailadres</b></div>
                 <div class="project-item">{{ $form->email }}</div>
+            </div>
+            <div class="middle-row">
+                <div class="header-item"><b>Aangemaakt</b></div>
                 <div class="project-item">{{ $form->created_at->format('d-m-Y') }}</div>
+            </div>
+            <div class="middle-row">
+                <div class="header-item"><b>Laatste wijziging</b></div>
                 <div class="project-item">{{ $form->updated_at->format('d-m-Y') }}</div>
             </div>
         </div>
