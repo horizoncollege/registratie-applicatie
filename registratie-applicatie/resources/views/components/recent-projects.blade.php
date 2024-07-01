@@ -8,46 +8,6 @@
         @endif
     </div>
     <div class="card-container">
-        {{-- Approved Projects --}}
-        <div class="project-section">
-            @if ($showHeaderText ?? false)
-            <h2>Goedgekeurde Projecten</h2>
-            @endif
-            <div class="projects">
-                <div class="header-row">
-                    <div class="header-item">Projectnaam</div>
-                    <div class="header-item">Bedrijf</div>
-                    <div class="header-item">Contactpersoon</div>
-                    <div class="header-item">Datum</div>
-                    <div class="header-item" style="visibility: hidden;">Actie</div>
-                </div>
-                @forelse ($approvedProjects as $project)
-                    <div class="project-row">
-                        <div class="project-item">{{ $project->name }}</div>
-                        <div class="project-item">{{ $project->company }}</div>
-                        <div class="project-item">{{ $project->contactperson }}</div>
-                        <div class="project-item">{{ $project->created_at->format('d-m-Y') }}</div>
-                        <div class="project-item">
-                            <div class="project-item bekijk-button">
-                                <?php
-                                $name = strtolower($project->name);
-                                $url = route('project.show', ['name' => urlencode($name)]);
-                                $url = str_replace('+', '%20', $url);
-                                ?>
-                                <a href="{{ $url }}">
-                                    <i class="fa-solid fa-arrow-right"></i> Open project
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                @empty
-                    <div class="project-row">
-                        <div class="project-item" colspan="5">Geen goedgekeurde projecten gevonden.</div>
-                    </div>
-                @endforelse
-            </div>
-        </div>
-
         {{-- In Afwachting --}}
         @if (isset($pendingProjects))
             <div class="project-section">
@@ -87,6 +47,46 @@
                 </div>
             </div>
         @endif
+
+        {{-- Approved Projects --}}
+        <div class="project-section">
+            @if ($showHeaderText ?? false)
+            <h2>Goedgekeurde Projecten</h2>
+            @endif
+            <div class="projects">
+                <div class="header-row">
+                    <div class="header-item">Projectnaam</div>
+                    <div class="header-item">Bedrijf</div>
+                    <div class="header-item">Contactpersoon</div>
+                    <div class="header-item">Datum</div>
+                    <div class="header-item" style="visibility: hidden;">Actie</div>
+                </div>
+                @forelse ($approvedProjects as $project)
+                    <div class="project-row">
+                        <div class="project-item">{{ $project->name }}</div>
+                        <div class="project-item">{{ $project->company }}</div>
+                        <div class="project-item">{{ $project->contactperson }}</div>
+                        <div class="project-item">{{ $project->created_at->format('d-m-Y') }}</div>
+                        <div class="project-item">
+                            <div class="project-item bekijk-button">
+                                <?php
+                                $name = strtolower($project->name);
+                                $url = route('project.show', ['name' => urlencode($name)]);
+                                $url = str_replace('+', '%20', $url);
+                                ?>
+                                <a href="{{ $url }}">
+                                    <i class="fa-solid fa-arrow-right"></i> Open project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                    <div class="project-row">
+                        <div class="project-item" colspan="5">Geen goedgekeurde projecten gevonden.</div>
+                    </div>
+                @endforelse
+            </div>
+        </div>
 
         {{-- Afgekeurde Projecten --}}
         @if (isset($rejectedProjects))
