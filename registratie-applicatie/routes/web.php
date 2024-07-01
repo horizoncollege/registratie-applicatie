@@ -16,10 +16,8 @@ Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('d
 Route::get('/dashboard/projecten', [DashboardController::class, 'showAllProjects'])->name('projecten');
 Route::get('/dashboard/projecten/{name}', [DashboardController::class, 'show'])->name('project.show');
 
-// Additional Dashboard pages
-Route::get('/dashboard/beoordelen', function () {
-    return view('dashboard.beoordelen');
-});
+// Beoordelen
+Route::get('/dashboard/beoordelen', [DashboardController::class, 'showPendingProjects'])->name('beoordelen');
 
 // Aanmeldformulier
 Route::get('/dashboard/aanmelden', function () {

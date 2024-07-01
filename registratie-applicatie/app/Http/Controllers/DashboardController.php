@@ -49,7 +49,28 @@ class DashboardController extends Controller
         return view('dashboard.projecten', compact('allProjects', 'approvedProjects', 'pendingProjects', 'rejectedProjects'));
     }
 
+    public function showPendingProjects(Request $request)
+    {
+        $searchTerm = $request->input('search');
+        $query = Form::where('status', 'pending');
 
+        if ($searchTerm) {
+            if (preg_match('/\d{2}-\d{2}-\d{4}/', $searchTerm)) {
+                $date = Carbon::createFromFormat('d-m-Y', $searchTerm)->format('Y-m-d');
+                $query->whereDate('created_at', $date);
+            } else {
+                $query->where(function ($q) use ($searchTerm) {
+                    $q->where('name', 'LIKE', '%' . $searchTerm . '%')
+                        ->orWhere('company', 'LIKE', '%' . $searchTerm . '%')
+                        ->orWhere('contactperson', 'LIKE', '%' . $searchTerm . '%');
+                });
+            }
+        }
+
+        $pendingProjects = $query->orderBy('created_at', 'desc')->get();
+
+        return view('dashboard.beoordelen', compact('pendingProjects'));
+    }
 
     public function show($name)
     {
