@@ -11,13 +11,13 @@
         {{-- In Afwachting --}}
         @if (isset($pendingProjects))
             <div class="project-section">
-                <h2>In Afwachting</h2>
+                <h2>In afwachting</h2>
                 <div class="projects">
                     <div class="header-row">
                         <div class="header-item">Projectnaam</div>
                         <div class="header-item">Bedrijf</div>
                         <div class="header-item">Contactpersoon</div>
-                        <div class="header-item">Datum</div>
+                        <div class="header-item">Laatste wijziging</div>
                         <div class="header-item" style="visibility: hidden;">Actie</div>
                     </div>
                     @forelse ($pendingProjects as $project)
@@ -51,14 +51,14 @@
         {{-- Approved Projects --}}
         <div class="project-section">
             @if ($showHeaderText ?? false)
-            <h2>Goedgekeurde Projecten</h2>
+            <h2>Goedgekeurde projecten</h2>
             @endif
             <div class="projects">
                 <div class="header-row">
                     <div class="header-item">Projectnaam</div>
                     <div class="header-item">Bedrijf</div>
                     <div class="header-item">Contactpersoon</div>
-                    <div class="header-item">Datum</div>
+                    <div class="header-item">Laatste wijziging</div>
                     <div class="header-item" style="visibility: hidden;">Actie</div>
                 </div>
                 @forelse ($approvedProjects as $project)
@@ -66,7 +66,7 @@
                         <div class="project-item">{{ $project->name }}</div>
                         <div class="project-item">{{ $project->company }}</div>
                         <div class="project-item">{{ $project->contactperson }}</div>
-                        <div class="project-item">{{ $project->created_at->format('d-m-Y') }}</div>
+                        <div class="project-item">{{ $project->updated_at->format('d-m-Y') }}</div>
                         <div class="project-item">
                             <div class="project-item bekijk-button">
                                 <?php
@@ -91,13 +91,13 @@
         {{-- Afgekeurde Projecten --}}
         @if (isset($rejectedProjects))
             <div class="project-section">
-                <h2>Afgekeurde Projecten</h2>
+                <h2>Afgekeurde projecten</h2>
                 <div class="projects">
                     <div class="header-row">
                         <div class="header-item">Projectnaam</div>
                         <div class="header-item">Bedrijf</div>
                         <div class="header-item">Contactpersoon</div>
-                        <div class="header-item">Datum</div>
+                        <div class="header-item">Laatste wijziging</div>
                         <div class="header-item" style="visibility: hidden;">Actie</div>
                     </div>
                     @forelse ($rejectedProjects as $project)
