@@ -20,10 +20,13 @@
                             brengt de vraagstukken van ondernemers als project in het onderwijs.</p>
                         <a href="#" class="button-white">Bekijk</a>
                     </div>
+
                     <div class="bottom-row">
-                        <video controls poster="{{ asset('images/talland_thumbnail.jpg') }}">
-                            <source src="{{ asset('video/Talland_promo_vid.mp4') }}" type="video/mp4">
-                        </video>
+                        <div class="video-container">
+                            <video controls poster="{{ asset('images/talland_thumbnail.jpg') }}">
+                                <source src="{{ asset('video/Talland_promo_vid.mp4') }}" type="video/mp4">
+                            </video>
+                        </div>
                         <div class="card card-left">
                             <h3>Lorem ipsum dolor sit amet</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim itaque alias cumque
@@ -33,11 +36,11 @@
                                 ad corrupti, illum aperiam sunt esse. Tenetur ratione fugit perspiciatis
                             </p>
                             <a href="#" class="button-purple">Doe mee!</a>
-                            <p></p>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="card-container">
                 <div class="left-column">
                     <div class="card card-left">
