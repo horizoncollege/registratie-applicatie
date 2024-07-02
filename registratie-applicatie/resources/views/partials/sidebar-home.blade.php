@@ -14,6 +14,7 @@
     </div>
     <ul>
         <li><a href="/"><i class="fa fa-fw fa-home"></i>Home</a></li>
+        <li><a href="/aanmelden"><i class="fa-solid fa-plus"></i>Project indienen</a></li>
         <li><a href="/informatie"><i class="fa-solid fa-circle-info"></i>Informatie</a></li>
         <li><a href="/login"><i class="fa-solid fa-right-to-bracket"></i>Inloggen</a></li>
     </ul>

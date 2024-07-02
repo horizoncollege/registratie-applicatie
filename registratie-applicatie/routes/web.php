@@ -40,6 +40,11 @@ Route::get('/informatie', function () {
     return view('informatie');
 });
 
+// Aanmeldformulier-home
+Route::get('/aanmelden', function () {
+    return view('aanmeldformulier-home');
+});
+
 // Breeze
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard');
