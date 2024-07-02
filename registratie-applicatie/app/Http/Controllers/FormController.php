@@ -7,51 +7,52 @@ use App\Models\Form;
 
 class FormController extends Controller
 {
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required',
-            'company' => 'required',
-            'place' => 'required',
-            'contactperson' => 'required',
-            'function' => 'required',
-            'phone' => 'required',
-            'email' => 'required',
-            'website' => 'required',
-            'activity' => 'required',
-            'workers' => 'required',
-            'kvk_number' => 'required',
-            'status' => 'required', // Add this line
-            // 'fileInput' => 'required|file',
-        ]);
+public function store(Request $request)
+{
+$validated = $request->validate([
+'name' => 'required',
+'company' => 'required',
+'place' => 'required',
+'contactperson' => 'required',
+'function' => 'required',
+'phone' => 'required',
+'email' => 'required',
+'website' => 'required',
+'activity' => 'required',
+'workers' => 'required',
+'kvk_number' => 'required',
+'status' => 'required', // Ensure status is validated
+// 'fileInput' => 'required|file',
+]);
 
-        if ($request->hasFile('fileInput')) {
-            $validated['fileInput'] = $request->file('fileInput')->store('uploads', 'public');
-        }
+if ($request->hasFile('fileInput')) {
+$validated['fileInput'] = $request->file('fileInput')->store('uploads', 'public');
+}
 
-        Form::create($validated);
+Form::create($validated);
 
-        return back()->with('success');
-    }
+// Set the success session variable
+return back()->with('success', 'Projectvoorstel succesvol ingediend!');
+}
 
-    public function destroy($id)
-    {
-        $form = Form::findOrFail($id);
-        $form->delete();
+public function destroy($id)
+{
+$form = Form::findOrFail($id);
+$form->delete();
 
-        return redirect()->route('projecten')->with('success', 'Project succesvol verwijderd.');
-    }
+return redirect()->route('projecten')->with('success', 'Project succesvol verwijderd.');
+}
 
-    public function updateStatus(Request $request, $id)
-    {
-        $form = Form::findOrFail($id);
+public function updateStatus(Request $request, $id)
+{
+$form = Form::findOrFail($id);
 
-        $validated = $request->validate([
-            'status' => 'required|string',
-        ]);
+$validated = $request->validate([
+'status' => 'required|string',
+]);
 
-        $form->update($validated);
+$form->update($validated);
 
-        return back()->with('success', 'Status succesvol bijgewerkt.');
-    }
+return back()->with('success', 'Status succesvol bijgewerkt.');
+}
 }
