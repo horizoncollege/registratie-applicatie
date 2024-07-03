@@ -389,6 +389,38 @@ header h1 {
     margin-right: 20px;
 }
 
+.button-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.submit-button {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #8230C4;
+    border-radius: 8px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+}
+
+.submit-button i {
+    margin-right: 10px;
+}
+
+.submit-button:hover {
+    background-color: #9f53dc;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -575,7 +607,7 @@ video {
 
 .card.card-left, .video-container {
     flex: 1;
-    min-width: 300px; 
+    min-width: 300px;
 }
 
 .video-container video {

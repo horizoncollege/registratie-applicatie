@@ -12,9 +12,9 @@
                     @method('PATCH')
                     <label for="status">Status:</label>
                     <select name="status" id="status">
-                        <option value="pending" {{ $form->status == 'pending' ? 'selected' : '' }}>Pending</option>
-                        <option value="approved" {{ $form->status == 'approved' ? 'selected' : '' }}>Approved</option>
-                        <option value="rejected" {{ $form->status == 'rejected' ? 'selected' : '' }}>Rejected</option>
+                        <option value="pending" {{ $form->status == 'pending' ? 'selected' : '' }}>In afwachting</option>
+                        <option value="approved" {{ $form->status == 'approved' ? 'selected' : '' }}>Goedgekeurd</option>
+                        <option value="rejected" {{ $form->status == 'rejected' ? 'selected' : '' }}>Afgekeurd</option>
                     </select>
                     <button type="submit">Update</button>
                 </form>
