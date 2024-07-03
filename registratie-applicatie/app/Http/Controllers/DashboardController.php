@@ -10,7 +10,7 @@ class DashboardController extends Controller
 {
     public function showDashboard()
     {
-        $recentProjects = Form::where('status', 'approved')->orderBy('created_at', 'desc')->take(3)->get();
+        $recentProjects = Form::where('status', 'approved')->orderBy('updated_at', 'desc')->take(3)->get();
         return view('dashboard.dashboard', compact('recentProjects'));
     }
 
@@ -32,7 +32,7 @@ class DashboardController extends Controller
             }
         }
 
-        $allProjects = $query->orderBy('created_at', 'desc')->paginate(10);
+        $allProjects = $query->orderBy('updated_at', 'desc')->paginate(10);
 
         $approvedProjects = $allProjects->filter(function ($project) {
             return $project->status === 'approved';
@@ -67,7 +67,7 @@ class DashboardController extends Controller
             }
         }
 
-        $pendingProjects = $query->orderBy('created_at', 'desc')->get();
+        $pendingProjects = $query->orderBy('updated_at', 'desc')->get();
 
         return view('dashboard.beoordelen', compact('pendingProjects'));
     }

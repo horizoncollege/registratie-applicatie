@@ -26,4 +26,7 @@
             </a>
         </li>
     </ul>
+    <div class="button-container">
+        <a href="/dashboard/aanmelden" class="submit-button"><i class="fa-solid fa-plus"></i>Project indienen</a>
+    </div>
 </nav>
