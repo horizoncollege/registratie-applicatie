@@ -8,6 +8,9 @@ Fixes # (issue number)
 
 (Voeg hieronder het uit te voeren test scenario toe zoals omscreven op de user story:)
 
+| Scenario |      Gewenst Resultaat     |  Resultaat | Verbetering |
+|----------|:-------------:|------:|:----------|
+
 # Checklist
 
 - [ ] Code volgt de Code Conventions
