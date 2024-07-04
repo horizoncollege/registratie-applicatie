@@ -86,6 +86,7 @@
             <div class="back-button">
                 <a href="/" onclick="history.back(); return false;"><i class="fa-solid fa-arrow-left"></i>Ga terug</a>
             </div>
+            <p>Abel R is kut</p>
         </section>
     </main>
 @endsection
