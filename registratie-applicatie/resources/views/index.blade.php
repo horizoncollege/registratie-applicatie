@@ -35,7 +35,7 @@
                                 totam culpa aliquam provident amet accusantium tenetur magnam placeat. Earum totam est
                                 ad corrupti, illum aperiam sunt esse. Tenetur ratione fugit perspiciatis
                             </p>
-                            <a href="#" class="button-purple">Doe mee!</a>
+                            <a href="/dashboard/aanmelden" class="button-purple">Doe mee!</a>
                         </div>
                     </div>
                 </div>

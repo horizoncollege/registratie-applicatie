@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UploadController;
 
 // Index
 Route::get('/', [HomeController::class, 'index']);
@@ -31,9 +32,15 @@ Route::patch('/form/{id}/status', [FormController::class, 'updateStatus'])->name
 Route::delete('/form/{id}', [FormController::class, 'destroy'])->name('form.destroy');
 
 // Profiel
+
+Route::get('uploads/', [UploadController::class, 'index'])->name('uploads.index');
+Route::post('uploads/create', [UploadController::class, 'create'])->name('uploads.create');
+Route::post('uploads/store', [UploadController::class, 'store'])->name('uploads.store');
 Route::get('/dashboard/profiel', function () {
     return view('dashboard.profiel');
 });
+
+
 
 // Informatie
 Route::get('/informatie', function () {
@@ -47,5 +54,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::patch('/dashboard/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/dashboard/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+// routes/web.php
+Route::post('uploads/store', [UploadController::class, 'store'])->name('uploads.store');
+
 
 require __DIR__ . '/auth.php';
