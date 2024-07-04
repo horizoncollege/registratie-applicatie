@@ -86,6 +86,8 @@
             <div class="back-button">
                 <a href="/" onclick="history.back(); return false;"><i class="fa-solid fa-arrow-left"></i>Ga terug</a>
             </div>
+
+                <p> Tim is lelijk </p>
         </section>
     </main>
 @endsection
