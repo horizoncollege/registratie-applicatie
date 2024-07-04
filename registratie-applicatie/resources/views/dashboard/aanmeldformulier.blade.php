@@ -1,11 +1,11 @@
 @extends('layouts.layout-dashboard')
 
-@section('title', 'Aanmelden')
+@section('title', 'Project indienen')
 
 @section('content')
     <main>
         <header>
-            <h1>Aanmelden</h1>
+            <h1>Project indienen</h1>
         </header>
 
         <!-- Content -->

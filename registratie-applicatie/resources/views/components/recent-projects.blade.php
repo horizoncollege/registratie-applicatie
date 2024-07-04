@@ -51,7 +51,7 @@
         {{-- Approved Projects --}}
         <div class="project-section">
             @if ($showHeaderText ?? false)
-            <h2>Goedgekeurde projecten</h2>
+                <h2>Goedgekeurde projecten</h2>
             @endif
             <div class="projects">
                 <div class="header-row">
@@ -105,7 +105,7 @@
                             <div class="project-item">{{ $project->name }}</div>
                             <div class="project-item">{{ $project->company }}</div>
                             <div class="project-item">{{ $project->contactperson }}</div>
-                            <div class="project-item">{{ $project->created_at->format('d-m-Y') }}</div>
+                            <div class="project-item">{{ $project->updated_at->format('d-m-Y') }}</div>
                             <div class="project-item">
                                 <div class="project-item bekijk-button">
                                     <?php
