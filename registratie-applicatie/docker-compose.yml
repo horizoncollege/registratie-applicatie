@@ -12,6 +12,7 @@ services:
         depends_on:
             - mysql
             - php
+
     mysql:
         image: mariadb:latest
         ports:
@@ -23,12 +24,14 @@ services:
             MYSQL_ROOT_PASSWORD: "secret"
         volumes:
             - ./mysql:/var/lib/mysql
+
     php:
         build:
             context: .
             dockerfile: php.dockerfile
         volumes:
             - ./src:/var/www/html
+
     composer:
         build:
             context: .
@@ -36,3 +39,13 @@ services:
         volumes:
             - ./src:/var/www/html
         working_dir: /var/www/html
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - "8080:80" # Expose phpMyAdmin on localhost:8080
+        environment:
+            PMA_HOST: mysql # Connect to the mysql service
+            MYSQL_ROOT_PASSWORD: "secret" # Use the root password from the MySQL service
+        depends_on:
+            - mysql
