@@ -22,6 +22,6 @@ Gedurende dit project hebben wij gewerkt aan een registratie applicatie. Het doe
 
 ## License©️
 
-Dit project is eigendom van [Talland College](https://www.tallandcollege.nl/)
+Dit project is eigendom van [Talland College](https://www.talland.nl/?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL8uMuflmKWBmIfrAUFsLKorrJ4B1HbqEIPzGwWysQHuy-RIT98CwERoCa_IQAvD_BwE)
 
 
