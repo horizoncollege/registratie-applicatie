@@ -22,6 +22,6 @@ Gedurende dit project hebben wij gewerkt aan een registratie applicatie. Het doe
 
 ## License©️
 
-Dit project is eigendom van [Horizon College](https://www.horizoncollege.nl/)
+Dit project is eigendom van [Talland College](https://www.tallandcollege.nl/)
 
 
